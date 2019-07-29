@@ -1,0 +1,10 @@
+ul.menu {
+  list-style: none;
+  li a {
+    opacity: 0.6;
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

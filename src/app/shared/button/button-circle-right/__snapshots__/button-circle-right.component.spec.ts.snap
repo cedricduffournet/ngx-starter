@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonCircleRightComponent should be created 1`] = `
+<app-button-circle-right
+  label=""
+  type={[Function String]}
+>
+  <div>
+    <button
+      class="btn-circle btn-xl btn btn-absolute-corner-right btn-success"
+      ng-reflect-klass="btn-circle btn-xl btn btn-abso"
+      ng-reflect-ng-class="btn-success"
+      type="button"
+    >
+        
+    </button>
+  </div>
+</app-button-circle-right>
+`;
+
+exports[`ButtonCircleRightComponent should display button with danger 1`] = `
+<app-button-circle-right
+  label=""
+  type={[Function String]}
+>
+  <div>
+    <button
+      class="btn-circle btn-xl btn btn-absolute-corner-right btn-danger"
+      ng-reflect-klass="btn-circle btn-xl btn btn-abso"
+      ng-reflect-ng-class="btn-danger"
+      type="button"
+    >
+        
+    </button>
+  </div>
+</app-button-circle-right>
+`;
+
+exports[`ButtonCircleRightComponent should display label 1`] = `
+<app-button-circle-right
+  label={[Function String]}
+  type={[Function String]}
+>
+  <div>
+    <button
+      class="btn-circle btn-xl btn btn-absolute-corner-right btn-success"
+      ng-reflect-klass="btn-circle btn-xl btn btn-abso"
+      ng-reflect-ng-class="btn-success"
+      type="button"
+    >
+       test label 
+    </button>
+  </div>
+</app-button-circle-right>
+`;

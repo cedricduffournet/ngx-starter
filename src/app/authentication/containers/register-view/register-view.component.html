@@ -1,0 +1,21 @@
+<app-auth-layout title="{{ 'REGISTER' | translate }}">
+  <ng-container *ngIf="status$ | async as status">
+    <app-register-form
+      *ngIf="status === 'init' || (errorUserExist$ | async)"
+      [processing]="processing$ | async"
+      [civilities]="civilities$ | async"
+      [errorUserExist]="errorUserExist$ | async"
+      (register)="onRegister($event)"
+    ></app-register-form>
+    <div
+      *ngIf="status === 'success'"
+      class="alert alert-success"
+      innerHTML="{{
+        'REGISTER_SUCCESS' | translate: { email: getEmailRegistered() }
+      }}"
+    ></div>
+    <a [routerLink]="['/login']" class="btn btn-link btn-block" translate>
+      CONNECT
+    </a>
+  </ng-container>
+</app-auth-layout>

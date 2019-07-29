@@ -1,0 +1,7 @@
+<app-modal-wrapper title="{{ 'ADD_CIVILITY_TITLE' | translate }}">
+  <app-civility-add
+    (cancel)="onCancel()"
+    (add)="onAdd($event)"
+    [adding]="adding$ | async"
+  ></app-civility-add>
+</app-modal-wrapper>

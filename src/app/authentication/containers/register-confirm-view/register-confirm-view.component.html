@@ -1,0 +1,25 @@
+<app-auth-layout title="{{ 'TITLE_REGISTER_CONFIRM' | translate }}">
+  <ng-container *ngIf="status$ | async as status">
+    <div
+      *ngIf="status === 'error'"
+      class="alert alert-danger"
+      innerHTML="{{ 'ERROR_REGISTER_CONFIRM' | translate }}"
+    ></div>
+    <div
+      class="alert alert-success"
+      *ngIf="status === 'success'"
+      innerHTML="{{ 'SUCCESS_REGISTER_CONFIRM' | translate }}"
+    ></div>
+    <div *ngIf="status === 'init'" class="alert alert-info" translate>
+      PROGRESS_VERIF
+    </div>
+    <a
+      *ngIf="status !== 'init'"
+      [routerLink]="['/login']"
+      class="btn btn-link btn-block"
+      translate
+    >
+      CONNECT
+    </a>
+  </ng-container>
+</app-auth-layout>

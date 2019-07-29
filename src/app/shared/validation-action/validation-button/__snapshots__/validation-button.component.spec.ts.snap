@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValidationButtonComponent should be created 1`] = `
+<app-validation-button
+  cancel={[Function EventEmitter]}
+  classCancel={[Function String]}
+  classConfirm={[Function String]}
+  confirm={[Function EventEmitter]}
+  confirmDisabled="false"
+  formGroupClass=""
+  labelCancel=""
+  labelConfirm=""
+  typeConfirm={[Function String]}
+>
+  <div
+    class="button-validation-action text-center d-flex justify-content-end align-items-center p-3-group"
+    ng-reflect-klass="button-validation-action text-"
+    ng-reflect-ng-class=""
+  >
+    
+    
+  </div>
+</app-validation-button>
+`;
+
+exports[`ValidationButtonComponent should be created with cancel and confirm button 1`] = `
+<app-validation-button
+  cancel={[Function EventEmitter]}
+  classCancel={[Function String]}
+  classConfirm={[Function String]}
+  confirm={[Function EventEmitter]}
+  confirmDisabled="false"
+  formGroupClass=""
+  labelCancel={[Function String]}
+  labelConfirm={[Function String]}
+  typeConfirm={[Function String]}
+>
+  <div
+    class="button-validation-action text-center d-flex justify-content-end align-items-center p-3-group"
+    ng-reflect-klass="button-validation-action text-"
+    ng-reflect-ng-class=""
+  >
+    
+    <button
+      class="btn btn-cancel btn-lg btn-light"
+      ng-reflect-klass="btn btn-cancel btn-lg"
+      ng-reflect-ng-class="btn-light"
+      type="button"
+    >
+       cancel 
+    </button>
+    
+    <button
+      class="btn btn-confirm btn-lg btn-primary"
+      ng-reflect-klass="btn btn-confirm btn-lg"
+      ng-reflect-ng-class="btn-primary"
+      type="submit"
+    >
+      
+      
+      
+      <span>
+        confirm
+      </span>
+    </button>
+  </div>
+</app-validation-button>
+`;

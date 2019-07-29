@@ -1,0 +1,68 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <label class="control-label" translate>CIVILITY</label>
+    <select
+      formControlName="civility"
+      [class.is-invalid]="civility?.invalid && submitted"
+      class="form-control custom-select"
+    >
+      <option [ngValue]="null" translate>CHOOSE</option>
+      <option *ngFor="let civility of civilities" [value]="civility.id">
+        {{ civility.code }}
+      </option>
+    </select>
+  </div>
+
+  <app-text-input
+    formControlName="firstname"
+    label="{{ 'FIRST_NAME' | translate }}"
+    [submitted]="submitted"
+  ></app-text-input>
+
+  <app-text-input
+    formControlName="lastname"
+    label="{{ 'LASTNAME' | translate }}"
+    [submitted]="submitted"
+  ></app-text-input>
+
+  <app-text-input
+    formControlName="email"
+    label="{{ 'EMAIL' | translate }}"
+    [submitted]="submitted"
+    [showError]="errorUserExist"
+    [errorText]="errorUserExist ? ('USER_EXIST' | translate) : ''"
+  ></app-text-input>
+
+  <div class="form-row" formGroupName="plainPassword">
+    <div class="col-md-6">
+      <app-text-input
+        type="password"
+        formControlName="first"
+        label="{{ 'PASSWORD' | translate }}"
+        helpText="{{ 'HELP_PASSWORD_FIELD' | translate }}"
+        [submitted]="submitted"
+      ></app-text-input>
+    </div>
+
+    <div class="col-md-6">
+      <app-text-input
+        type="password"
+        formControlName="second"
+        label="{{ 'PASSWORD_CONFIRMATION' | translate }}"
+        [showError]="showErrorPasswordEqual"
+        errorText="{{ 'FIELD_PASSWORD_MUST_BE_EQUAL' | translate }}"
+      ></app-text-input>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button
+      type="submit"
+      class="btn btn-primary btn-lg btn-block"
+      [disabled]="processing"
+      translate
+    >
+      CREATE_ACCOUNT
+    </button>
+  </div>
+</form>

@@ -1,0 +1,25 @@
+<form [formGroup]="civilityForm" (ngSubmit)="onSubmit()" novalidate>
+  <section class="bg-white">
+    <div class="p-3">
+      <app-text-input
+        formControlName="code"
+        label="{{ 'ABBREVIATION' | translate }}"
+        [submitted]="submitted"
+      ></app-text-input>
+
+      <app-text-input
+        formControlName="name"
+        label="{{ 'NAME' | translate }}"
+        [submitted]="submitted"
+      ></app-text-input>
+    </div>
+  </section>
+  <app-wrapper-validation-action>
+    <app-validation-button
+      (cancel)="onCancel()"
+      labelConfirm="{{ 'SAVE' | translate }}"
+      labelCancel="{{ 'CANCEL' | translate }}"
+      [confirmDisabled]="processing"
+    ></app-validation-button>
+  </app-wrapper-validation-action>
+</form>

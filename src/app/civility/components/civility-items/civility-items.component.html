@@ -1,0 +1,36 @@
+<section class="bg-white border-left border-right border-bottom rounded">
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th class="align-middle" translate>
+            ABBREVIATION
+          </th>
+          <th class="align-middle" translate>
+            NAME
+          </th>
+          <th class="align-middle text-right">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="item"
+          appCivilityItem
+          *ngFor="let civility of civilities; trackBy: trackById"
+          [authorization]="authorization"
+          [civility]="civility"
+          (delete)="onDelete($event)"
+          (update)="onUpdate($event)"
+        ></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<app-button-circle-right
+  label="+"
+  *ngIf="authorization.create"
+  (click)="onAdd()"
+></app-button-circle-right>

@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthLayout should be created 1`] = `
+<app-auth-layout>
+  <div
+    class="row"
+  >
+    <div
+      class="col-md-12"
+    >
+      <div
+        class="float-right pr-3 pt-3"
+      >
+        <app-lang-switcher />
+      </div>
+    </div>
+  </div><div
+    class="center-div login mt-5"
+  >
+    <span
+      class="h2"
+    >
+      
+    </span>
+    
+    <br />
+    <section
+      class="mt-3 card"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="text-center mb-3"
+        >
+          <a
+            class="logo-link"
+            href="#"
+          >
+            <app-logo
+              color="black"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</app-auth-layout>
+`;
+
+exports[`AuthLayout should display title 1 1`] = `
+<app-auth-layout
+  title={[Function String]}
+>
+  <div
+    class="row"
+  >
+    <div
+      class="col-md-12"
+    >
+      <div
+        class="float-right pr-3 pt-3"
+      >
+        <app-lang-switcher />
+      </div>
+    </div>
+  </div><div
+    class="center-div login mt-5"
+  >
+    <span
+      class="h2"
+    >
+      test
+    </span>
+    
+    <br />
+    <section
+      class="mt-3 card"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="text-center mb-3"
+        >
+          <a
+            class="logo-link"
+            href="#"
+          >
+            <app-logo
+              color="black"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</app-auth-layout>
+`;
+
+exports[`AuthLayout should display title2 1`] = `
+<app-auth-layout
+  title2={[Function String]}
+>
+  <div
+    class="row"
+  >
+    <div
+      class="col-md-12"
+    >
+      <div
+        class="float-right pr-3 pt-3"
+      >
+        <app-lang-switcher />
+      </div>
+    </div>
+  </div><div
+    class="center-div login mt-5"
+  >
+    <span
+      class="h2"
+    >
+      
+    </span>
+    
+    <span
+      class="h2 text-black-50"
+    >
+      <br />
+       title 2 
+    </span>
+    <br />
+    <section
+      class="mt-3 card"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="text-center mb-3"
+        >
+          <a
+            class="logo-link"
+            href="#"
+          >
+            <app-logo
+              color="black"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</app-auth-layout>
+`;

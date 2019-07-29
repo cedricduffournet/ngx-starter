@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginViewReducer  CLEAR should return default state on clear 1`] = `
+Object {
+  "error": false,
+  "processing": false,
+}
+`;
+
+exports[`LoginViewReducer  LOAD_LOGGED_USER_SUCCESS should set processing to false 1`] = `
+Object {
+  "error": false,
+  "processing": false,
+}
+`;
+
+exports[`LoginViewReducer  LOGIN should set processing to true 1`] = `
+Object {
+  "error": false,
+  "processing": true,
+}
+`;
+
+exports[`LoginViewReducer  LOGIN_FAILURE & LOAD_LOGGED_USER_FAILURE should set processing to false and error to true  1`] = `
+Object {
+  "error": true,
+  "processing": false,
+}
+`;
+
+exports[`LoginViewReducer  LOGIN_FAILURE & LOAD_LOGGED_USER_FAILURE should set processing to false and error to true  2`] = `
+Object {
+  "error": true,
+  "processing": false,
+}
+`;
+
+exports[`LoginViewReducer  LOGIN_SUCCESS should set processing to false 1`] = `
+Object {
+  "error": false,
+  "processing": false,
+}
+`;
+
+exports[`LoginViewReducer  undefined action should return the default state 1`] = `
+Object {
+  "error": false,
+  "processing": false,
+}
+`;

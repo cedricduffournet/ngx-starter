@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LangSwitcherComponent should be created 1`] = `
+<app-lang-switcher
+  current$={[Function BehaviorSubject]}
+  langs={[Function Array]}
+  translate={[Function TranslateService]}
+>
+  
+</app-lang-switcher>
+`;
+
+exports[`LangSwitcherComponent should be created with en selected 1`] = `
+<app-lang-switcher
+  current$={[Function BehaviorSubject]}
+  langs={[Function Array]}
+  translate={[Function TranslateService]}
+>
+  <div
+    class="lang-switcher"
+  >
+    
+    <button
+      class="btn btn-sm en btn-light"
+      ng-reflect-klass="btn btn-sm en"
+      ng-reflect-ng-class="[object Object]"
+      type="button"
+    >
+       FR 
+    </button>
+    <button
+      class="btn btn-sm en btn-info"
+      ng-reflect-klass="btn btn-sm en"
+      ng-reflect-ng-class="[object Object]"
+      type="button"
+    >
+       EN 
+    </button>
+  </div>
+</app-lang-switcher>
+`;

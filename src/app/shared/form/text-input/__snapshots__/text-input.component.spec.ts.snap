@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputComponent should be created 1`] = `
+<ng-component
+  controlTest={[Function FormControl]}
+  errorText=""
+  formGroupClass=""
+  helpText=""
+  label=""
+  placeholder=""
+  showError="false"
+  submitted="false"
+  type={[Function String]}
+>
+  <app-text-input
+    class="ng-untouched ng-pristine ng-valid"
+    ng-reflect-error-text=""
+    ng-reflect-form="[object Object]"
+    ng-reflect-form-group-class=""
+    ng-reflect-help-text=""
+    ng-reflect-label=""
+    ng-reflect-placeholder=""
+    ng-reflect-show-error="false"
+    ng-reflect-submitted="false"
+    ng-reflect-type="text"
+  >
+    <div
+      class="form-group "
+    >
+      <label
+        class="control-label"
+      >
+        
+      </label>
+      <input
+        class="form-control"
+        placeholder=""
+        type="text"
+      />
+      
+      
+      
+      
+      
+      
+    </div>
+  </app-text-input>
+</ng-component>
+`;

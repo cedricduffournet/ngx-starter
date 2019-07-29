@@ -1,0 +1,40 @@
+<div class="alert alert-danger" *ngIf="error" translate>
+  AUTHENTICATION_FAILED
+</div>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+  <app-text-input
+    [submitted]="submitted"
+    formControlName="login"
+    label="{{ 'LOGIN' | translate }}"
+    placeholder="{{ 'PLACEHOLDER_LOGIN' | translate }}"
+    type="email"
+  ></app-text-input>
+
+  <app-text-input
+    [submitted]="submitted"
+    label="{{ 'PASSWORD' | translate }}"
+    formControlName="password"
+    placeholder="{{ 'PLACEHOLDER_PASSWORD' | translate }}"
+    type="password"
+  ></app-text-input>
+
+  <div class="form-group">
+    <button
+      type="submit"
+      [disabled]="processing"
+      class="btn btn-primary btn-block btn-lg"
+      translate
+    >
+      CONNECT
+    </button>
+  </div>
+
+  <a [routerLink]="['/resetting']" class="btn btn-link btn-block" translate>
+    RESET_PASSWORD
+  </a>
+
+  <a [routerLink]="['/register']" class="btn btn-link btn-block" translate>
+    REGISTER
+  </a>
+</form>

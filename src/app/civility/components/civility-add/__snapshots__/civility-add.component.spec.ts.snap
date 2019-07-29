@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CivilityAdd should be created 1`] = `
+<app-civility-add
+  add={[Function EventEmitter]}
+  adding="false"
+  cancel={[Function EventEmitter]}
+>
+  <app-civility-form
+    ng-reflect-processing="false"
+  >
+    <form
+      class="ng-untouched ng-pristine ng-invalid"
+      ng-reflect-form="[object Object]"
+      novalidate=""
+    >
+      <section
+        class="bg-white"
+      >
+        <div
+          class="p-3"
+        >
+          <app-text-input
+            class="ng-untouched ng-pristine ng-invalid"
+            formcontrolname="code"
+            ng-reflect-label="ABBREVIATION"
+            ng-reflect-name="code"
+            ng-reflect-submitted="false"
+          >
+            <div
+              class="form-group "
+            >
+              <label
+                class="control-label"
+              >
+                ABBREVIATION
+              </label>
+              <input
+                class="form-control"
+                placeholder=""
+                type="text"
+              />
+              
+              
+              
+              
+              
+              
+            </div>
+          </app-text-input>
+          <app-text-input
+            class="ng-untouched ng-pristine ng-invalid"
+            formcontrolname="name"
+            ng-reflect-label="NAME"
+            ng-reflect-name="name"
+            ng-reflect-submitted="false"
+          >
+            <div
+              class="form-group "
+            >
+              <label
+                class="control-label"
+              >
+                NAME
+              </label>
+              <input
+                class="form-control"
+                placeholder=""
+                type="text"
+              />
+              
+              
+              
+              
+              
+              
+            </div>
+          </app-text-input>
+        </div>
+      </section>
+      <app-wrapper-validation-action>
+        <div
+          class="d-flex justify-content-end align-items-center p-3"
+        >
+          <app-validation-button
+            ng-reflect-confirm-disabled="false"
+            ng-reflect-label-cancel="CANCEL"
+            ng-reflect-label-confirm="SAVE"
+          >
+            <div
+              class="button-validation-action text-center d-flex justify-content-end align-items-center p-3-group"
+              ng-reflect-klass="button-validation-action text-"
+              ng-reflect-ng-class=""
+            >
+              
+              <button
+                class="btn btn-cancel btn-lg btn-light"
+                ng-reflect-klass="btn btn-cancel btn-lg"
+                ng-reflect-ng-class="btn-light"
+                type="button"
+              >
+                 CANCEL 
+              </button>
+              
+              <button
+                class="btn btn-confirm btn-lg btn-primary"
+                ng-reflect-klass="btn btn-confirm btn-lg"
+                ng-reflect-ng-class="btn-primary"
+                type="submit"
+              >
+                
+                
+                
+                <span>
+                  SAVE
+                </span>
+              </button>
+            </div>
+          </app-validation-button>
+        </div>
+      </app-wrapper-validation-action>
+    </form>
+  </app-civility-form>
+</app-civility-add>
+`;
+
+exports[`CivilityAdd should indicate to form civility is not processing 1`] = `
+<app-civility-add
+  add={[Function EventEmitter]}
+  adding="false"
+  cancel={[Function EventEmitter]}
+>
+  <app-civility-form
+    ng-reflect-processing="false"
+  >
+    <form
+      class="ng-untouched ng-pristine ng-invalid"
+      ng-reflect-form="[object Object]"
+      novalidate=""
+    >
+      <section
+        class="bg-white"
+      >
+        <div
+          class="p-3"
+        >
+          <app-text-input
+            class="ng-untouched ng-pristine ng-invalid"
+            formcontrolname="code"
+            ng-reflect-label="ABBREVIATION"
+            ng-reflect-name="code"
+            ng-reflect-submitted="false"
+          >
+            <div
+              class="form-group "
+            >
+              <label
+                class="control-label"
+              >
+                ABBREVIATION
+              </label>
+              <input
+                class="form-control"
+                placeholder=""
+                type="text"
+              />
+              
+              
+              
+              
+              
+              
+            </div>
+          </app-text-input>
+          <app-text-input
+            class="ng-untouched ng-pristine ng-invalid"
+            formcontrolname="name"
+            ng-reflect-label="NAME"
+            ng-reflect-name="name"
+            ng-reflect-submitted="false"
+          >
+            <div
+              class="form-group "
+            >
+              <label
+                class="control-label"
+              >
+                NAME
+              </label>
+              <input
+                class="form-control"
+                placeholder=""
+                type="text"
+              />
+              
+              
+              
+              
+              
+              
+            </div>
+          </app-text-input>
+        </div>
+      </section>
+      <app-wrapper-validation-action>
+        <div
+          class="d-flex justify-content-end align-items-center p-3"
+        >
+          <app-validation-button
+            ng-reflect-confirm-disabled="false"
+            ng-reflect-label-cancel="CANCEL"
+            ng-reflect-label-confirm="SAVE"
+          >
+            <div
+              class="button-validation-action text-center d-flex justify-content-end align-items-center p-3-group"
+              ng-reflect-klass="button-validation-action text-"
+              ng-reflect-ng-class=""
+            >
+              
+              <button
+                class="btn btn-cancel btn-lg btn-light"
+                ng-reflect-klass="btn btn-cancel btn-lg"
+                ng-reflect-ng-class="btn-light"
+                type="button"
+              >
+                 CANCEL 
+              </button>
+              
+              <button
+                class="btn btn-confirm btn-lg btn-primary"
+                ng-reflect-klass="btn btn-confirm btn-lg"
+                ng-reflect-ng-class="btn-primary"
+                type="submit"
+              >
+                
+                
+                
+                <span>
+                  SAVE
+                </span>
+              </button>
+            </div>
+          </app-validation-button>
+        </div>
+      </app-wrapper-validation-action>
+    </form>
+  </app-civility-form>
+</app-civility-add>
+`;
+
+exports[`CivilityAdd should indicate to form civility is processing 1`] = `
+<app-civility-add
+  add={[Function EventEmitter]}
+  adding={[Function Boolean]}
+  cancel={[Function EventEmitter]}
+>
+  <app-civility-form
+    ng-reflect-processing="true"
+  >
+    <form
+      class="ng-untouched ng-pristine ng-invalid"
+      ng-reflect-form="[object Object]"
+      novalidate=""
+    >
+      <section
+        class="bg-white"
+      >
+        <div
+          class="p-3"
+        >
+          <app-text-input
+            class="ng-untouched ng-pristine ng-invalid"
+            formcontrolname="code"
+            ng-reflect-label="ABBREVIATION"
+            ng-reflect-name="code"
+            ng-reflect-submitted="false"
+          >
+            <div
+              class="form-group "
+            >
+              <label
+                class="control-label"
+              >
+                ABBREVIATION
+              </label>
+              <input
+                class="form-control"
+                placeholder=""
+                type="text"
+              />
+              
+              
+              
+              
+              
+              
+            </div>
+          </app-text-input>
+          <app-text-input
+            class="ng-untouched ng-pristine ng-invalid"
+            formcontrolname="name"
+            ng-reflect-label="NAME"
+            ng-reflect-name="name"
+            ng-reflect-submitted="false"
+          >
+            <div
+              class="form-group "
+            >
+              <label
+                class="control-label"
+              >
+                NAME
+              </label>
+              <input
+                class="form-control"
+                placeholder=""
+                type="text"
+              />
+              
+              
+              
+              
+              
+              
+            </div>
+          </app-text-input>
+        </div>
+      </section>
+      <app-wrapper-validation-action>
+        <div
+          class="d-flex justify-content-end align-items-center p-3"
+        >
+          <app-validation-button
+            ng-reflect-confirm-disabled="true"
+            ng-reflect-label-cancel="CANCEL"
+            ng-reflect-label-confirm="SAVE"
+          >
+            <div
+              class="button-validation-action text-center d-flex justify-content-end align-items-center p-3-group"
+              ng-reflect-klass="button-validation-action text-"
+              ng-reflect-ng-class=""
+            >
+              
+              
+              <button
+                class="btn btn-confirm btn-lg btn-primary"
+                disabled=""
+                ng-reflect-klass="btn btn-confirm btn-lg"
+                ng-reflect-ng-class="btn-primary"
+                type="submit"
+              >
+                
+                <span
+                  class="spinner-border spinner-border-sm align-baseline"
+                  style="font-size: 1rem;"
+                />
+                
+                <span>
+                   LOADING
+                </span>
+                
+              </button>
+            </div>
+          </app-validation-button>
+        </div>
+      </app-wrapper-validation-action>
+    </form>
+  </app-civility-form>
+</app-civility-add>
+`;

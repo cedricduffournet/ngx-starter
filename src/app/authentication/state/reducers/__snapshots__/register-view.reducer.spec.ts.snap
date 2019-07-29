@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterViewReducer  CLEAR shoud restore state to initial state 1`] = `
+Object {
+  "errorUserExist": false,
+  "processing": false,
+  "status": "init",
+  "userRegistered": null,
+}
+`;
+
+exports[`RegisterViewReducer  REGISTER should set processing to true 1`] = `
+Object {
+  "errorUserExist": false,
+  "processing": true,
+  "status": "init",
+  "userRegistered": null,
+}
+`;
+
+exports[`RegisterViewReducer  REGISTER_FAILURE should set processing to false,status to error and userExist to true 1`] = `
+Object {
+  "errorUserExist": true,
+  "processing": false,
+  "status": "error",
+  "userRegistered": null,
+}
+`;
+
+exports[`RegisterViewReducer  REGISTER_SUCCESS should set processing to false, status to success and userRegistered 1`] = `
+Object {
+  "errorUserExist": false,
+  "processing": false,
+  "status": "success",
+  "userRegistered": Object {
+    "firstname": "firstname",
+  },
+}
+`;
+
+exports[`RegisterViewReducer  undefined action should return the default state 1`] = `
+Object {
+  "errorUserExist": false,
+  "processing": false,
+  "status": "init",
+  "userRegistered": null,
+}
+`;

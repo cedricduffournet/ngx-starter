@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParameterCivilityComponent should be created 1`] = `
+<app-list-parameters
+  canViewCivility$={[Function Store]}
+  store={[Function MockStore]}
+>
+  <app-page-inner>
+    <div
+      class="px-3 py-3 "
+    >
+      <div
+        class="page-section"
+      >
+        <div
+          class="row"
+        >
+          
+        </div>
+      </div>
+    </div>
+  </app-page-inner>
+</app-list-parameters>
+`;

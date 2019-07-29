@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoutConfirm should be created 1`] = `
+<app-logout-modal
+  bsModalRef={[Function BsModalRef]}
+  store={[Function MockStore]}
+>
+  <app-modal-wrapper
+    ng-reflect-title="CONFIRM"
+  >
+    <div
+      class="modal-content bg-light"
+    >
+      
+      <div
+        class="modal-header"
+      >
+        <h4
+          class="modal-title"
+        >
+          CONFIRM
+        </h4>
+      </div>
+      <div
+        class="modal-body p-0"
+      >
+        <section
+          class="bg-white"
+        >
+          <div
+            class="p-3"
+            ng-reflect-translate=""
+            translate=""
+          >
+             CONFIRM_LOGOUT 
+          </div>
+        </section>
+        <app-wrapper-validation-action>
+          <div
+            class="d-flex justify-content-end align-items-center p-3"
+          >
+            <app-validation-button
+              ng-reflect-label-cancel="NO"
+              ng-reflect-label-confirm="YES"
+            >
+              <div
+                class="button-validation-action text-center d-flex justify-content-end align-items-center p-3-group"
+                ng-reflect-klass="button-validation-action text-"
+                ng-reflect-ng-class=""
+              >
+                
+                <button
+                  class="btn btn-cancel btn-lg btn-light"
+                  ng-reflect-klass="btn btn-cancel btn-lg"
+                  ng-reflect-ng-class="btn-light"
+                  type="button"
+                >
+                   NO 
+                </button>
+                
+                <button
+                  class="btn btn-confirm btn-lg btn-primary"
+                  ng-reflect-klass="btn btn-confirm btn-lg"
+                  ng-reflect-ng-class="btn-primary"
+                  type="submit"
+                >
+                  
+                  
+                  
+                  <span>
+                    YES
+                  </span>
+                </button>
+              </div>
+            </app-validation-button>
+          </div>
+        </app-wrapper-validation-action>
+      </div>
+    </div>
+  </app-modal-wrapper>
+</app-logout-modal>
+`;

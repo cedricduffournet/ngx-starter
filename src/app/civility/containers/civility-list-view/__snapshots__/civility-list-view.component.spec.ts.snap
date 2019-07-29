@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CivilityListViewComponent should be created 1`] = `
+<app-civility-list-view
+  authorization$={[Function Store]}
+  civilities$={[Function Store]}
+  loggedUser$={[Function Store]}
+  store={[Function MockStore]}
+>
+  <app-page-inner>
+    <div
+      class="px-3 py-3 "
+    >
+      <div
+        class="page-section"
+      >
+        <app-civility-items
+          ng-reflect-authorization="[object Object]"
+          ng-reflect-civilities=""
+        >
+          <section
+            class="bg-white border-left border-right border-bottom rounded"
+          >
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="table table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      class="align-middle"
+                      ng-reflect-translate=""
+                      translate=""
+                    >
+                       ABBREVIATION 
+                    </th>
+                    <th
+                      class="align-middle"
+                      ng-reflect-translate=""
+                      translate=""
+                    >
+                       NAME 
+                    </th>
+                    <th
+                      class="align-middle text-right"
+                    >
+                       Actions 
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+            </div>
+          </section>
+          
+          <app-button-circle-right
+            label="+"
+            ng-reflect-label="+"
+          >
+            <div>
+              <button
+                class="btn-circle btn-xl btn btn-absolute-corner-right btn-success"
+                ng-reflect-klass="btn-circle btn-xl btn btn-abso"
+                ng-reflect-ng-class="btn-success"
+                type="button"
+              >
+                 + 
+              </button>
+            </div>
+          </app-button-circle-right>
+        </app-civility-items>
+      </div>
+    </div>
+  </app-page-inner>
+</app-civility-list-view>
+`;

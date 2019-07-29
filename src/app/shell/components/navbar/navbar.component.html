@@ -1,0 +1,52 @@
+<nav *ngIf="loggedUser" class="navbar navbar-expand bg-white main-navbar">
+  <button
+    type="button"
+    class="button-top-bar navbar-toggle"
+    (click)="onToggleMenu()"
+  >
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <button
+    type="button"
+    class="button-top-bar previous-link"
+    *ngIf="previousLink"
+    [routerLink]="previousLink"
+  >
+    <fa-icon [icon]="['fas', 'angle-left']" size="2x"></fa-icon>
+  </button>
+  <div class="px-3 navbar flex-fill">
+    <div>
+      <span class="h2 page-title" translate>{{ pageTitle }}</span>
+    </div>
+    <div class="navbar">
+      <app-dropdown-navbar
+        [user]="loggedUser"
+        (logout)="onLogout($event)"
+      ></app-dropdown-navbar>
+    </div>
+  </div>
+</nav>
+
+<aside class="app-aside p-3" [ngClass]="{ opened: opened }">
+  <header class="aside-header">
+    <a href="#" class="pb-3 d-block border-bottom border-dark">
+      <app-logo></app-logo>
+    </a>
+  </header>
+  <div>
+    <button
+      (click)="onToggleMenu()"
+      type="button"
+      class="btn btn-lg close-backdrop toggle-button"
+    >
+      <fa-icon [icon]="['fas', 'times']"></fa-icon>
+    </button>
+    <app-menu [menu]="menu" (selectItem)="onToggleMenu()"></app-menu>
+    <div class="lang-switcher">
+      <app-lang-switcher></app-lang-switcher>
+    </div>
+  </div>
+</aside>

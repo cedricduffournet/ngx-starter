@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteCivilityModalComponent should be created 1`] = `
+<app-civility-delete-modal
+  bsModalRef={[Function BsModalRef]}
+  deleted$={[Function Store]}
+  deleting$={[Function Store]}
+  selectedCivility$={[Function Store]}
+  store={[Function MockStore]}
+  subscription={[Function Subscriber]}
+>
+  <app-modal-wrapper
+    ng-reflect-title="CONFIRM"
+  >
+    <div
+      class="modal-content bg-light"
+    >
+      
+      <div
+        class="modal-header"
+      >
+        <h4
+          class="modal-title"
+        >
+          CONFIRM
+        </h4>
+      </div>
+      <div
+        class="modal-body p-0"
+      >
+        <app-civility-delete>
+          <section
+            class="bg-white"
+          >
+            <div
+              class="p-3"
+            >
+               QUESTION_DELETE CIVILITY_DELETE 
+            </div>
+          </section>
+          <app-wrapper-validation-action>
+            <div
+              class="d-flex justify-content-end align-items-center p-3"
+            >
+              <app-validation-button
+                classconfirm="danger"
+                ng-reflect-class-confirm="danger"
+                ng-reflect-label-cancel="CANCEL"
+                ng-reflect-label-confirm="DELETE"
+              >
+                <div
+                  class="button-validation-action text-center d-flex justify-content-end align-items-center p-3-group"
+                  ng-reflect-klass="button-validation-action text-"
+                  ng-reflect-ng-class=""
+                >
+                  
+                  <button
+                    class="btn btn-cancel btn-lg btn-light"
+                    ng-reflect-klass="btn btn-cancel btn-lg"
+                    ng-reflect-ng-class="btn-light"
+                    type="button"
+                  >
+                     CANCEL 
+                  </button>
+                  
+                  <button
+                    class="btn btn-confirm btn-lg btn-danger"
+                    ng-reflect-klass="btn btn-confirm btn-lg"
+                    ng-reflect-ng-class="btn-danger"
+                    type="submit"
+                  >
+                    
+                    
+                    
+                    <span>
+                      DELETE
+                    </span>
+                  </button>
+                </div>
+              </app-validation-button>
+            </div>
+          </app-wrapper-validation-action>
+        </app-civility-delete>
+      </div>
+    </div>
+  </app-modal-wrapper>
+</app-civility-delete-modal>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToasterComponent should be created 1`] = `
+<app-toaster
+  store={[Function MockStore]}
+  toaster={[Function ToasterService]}
+  toasterConfig={[Function ToasterConfig]}
+  toasterParams$={[Function Store]}
+>
+  <toaster-container
+    ng-reflect-toasterconfig="[object Object]"
+  >
+    <div
+      class="toast-top-right"
+      id="toast-container"
+      ng-reflect-ng-class="toast-top-right"
+    >
+      
+    </div>
+  </toaster-container>
+</app-toaster>
+`;

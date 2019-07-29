@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToasterReducer POP should set params 1`] = `
+Object {
+  "params": Object {
+    "body": "body",
+    "clear": true,
+    "timeout": 12,
+    "title": "title",
+    "type": "success",
+  },
+}
+`;
+
+exports[`ToasterReducer Selectors getParams shoud retrieve params 1`] = `
+Object {
+  "body": "body",
+  "clear": true,
+  "timeout": 12,
+  "title": "title",
+  "type": "success",
+}
+`;
+
+exports[`ToasterReducer undefined action should return the default state 1`] = `
+Object {
+  "params": Object {
+    "body": "",
+    "clear": false,
+    "timeout": null,
+    "title": "",
+    "type": "",
+  },
+}
+`;

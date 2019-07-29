@@ -1,0 +1,10 @@
+<app-auth-layout
+  title="{{ 'HELLO' | translate }},"
+  title2="{{ 'AUTHENTICATE' | translate }}"
+>
+  <app-login-form
+    [processing]="processing$ | async"
+    [error]="error$ | async"
+    (login)="onLogin($event)"
+  ></app-login-form>
+</app-auth-layout>

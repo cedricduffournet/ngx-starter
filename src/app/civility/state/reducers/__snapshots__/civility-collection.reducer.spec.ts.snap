@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CivilityCollectionReducer ADD should set adding to true on CivilityAddModalActions.addCivility 1`] = `
+Object {
+  "added": false,
+  "adding": true,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+}
+`;
+
+exports[`CivilityCollectionReducer ADD_FAILURE & SHOW_MODAL_ADD should set adding to false on CivilityListViewActions.showAddCivilityModal 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+}
+`;
+
+exports[`CivilityCollectionReducer ADD_FAILURE & SHOW_MODAL_ADD should set adding to false, added to false 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+}
+`;
+
+exports[`CivilityCollectionReducer ADD_SUCCESS should set adding to false, added to true and add new civility (3) to ids 1`] = `
+Object {
+  "added": true,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [
+    1,
+    2,
+    3,
+  ],
+  "loaded": false,
+  "loading": false,
+}
+`;
+
+exports[`CivilityCollectionReducer DELETE should set deleting to true 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": true,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+}
+`;
+
+exports[`CivilityCollectionReducer DELETE_FAILURE & SHOW_MODAL_DELETE should set removing to false, remove to false 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+  "removed": true,
+  "removing": true,
+}
+`;
+
+exports[`CivilityCollectionReducer DELETE_FAILURE & SHOW_MODAL_DELETE should set removing to false, remove to false on CivilityListViewActions.showDeleteCivilityModal 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+  "removed": true,
+  "removing": true,
+}
+`;
+
+exports[`CivilityCollectionReducer DELETE_SUCCESS should set deleting to false, deleted to true and remove civility (1) form ids 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": true,
+  "deleting": false,
+  "ids": Array [
+    2,
+  ],
+  "loaded": false,
+  "loading": false,
+  "removing": true,
+}
+`;
+
+exports[`CivilityCollectionReducer LOAD should set loading to true 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": true,
+}
+`;
+
+exports[`CivilityCollectionReducer LOAD_FAILURE  should set loading to false, loaded to false 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+}
+`;
+
+exports[`CivilityCollectionReducer LOAD_SUCCESS  should set loading to false, loaded to true and set civility ids [1, 2] 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [
+    1,
+    2,
+  ],
+  "loaded": true,
+  "loading": false,
+}
+`;
+
+exports[`CivilityCollectionReducer Selectors getAdded should retrieve added false 1`] = `false`;
+
+exports[`CivilityCollectionReducer Selectors getAdded should retrieve added true 1`] = `true`;
+
+exports[`CivilityCollectionReducer Selectors getAdding should retrieve adding false 1`] = `false`;
+
+exports[`CivilityCollectionReducer Selectors getAdding should retrieve adding true 1`] = `true`;
+
+exports[`CivilityCollectionReducer Selectors getDeleted should retrieve deleted false 1`] = `false`;
+
+exports[`CivilityCollectionReducer Selectors getDeleted should retrieve deleted true 1`] = `true`;
+
+exports[`CivilityCollectionReducer Selectors getDeleting should retrieve removing false 1`] = `false`;
+
+exports[`CivilityCollectionReducer Selectors getDeleting should retrieve removing true 1`] = `true`;
+
+exports[`CivilityCollectionReducer Selectors getIds should retrieve ids [1,2,3] 1`] = `
+Array [
+  1,
+  2,
+  3,
+]
+`;
+
+exports[`CivilityCollectionReducer Selectors getLoaded should retrieve loaded false 1`] = `false`;
+
+exports[`CivilityCollectionReducer Selectors getLoaded should retrieve loaded true 1`] = `true`;
+
+exports[`CivilityCollectionReducer Selectors getLoading should retrieve loading false 1`] = `false`;
+
+exports[`CivilityCollectionReducer Selectors getLoading should retrieve loading true 1`] = `true`;
+
+exports[`CivilityCollectionReducer undefined action should return the default state 1`] = `
+Object {
+  "added": false,
+  "adding": false,
+  "deleted": false,
+  "deleting": false,
+  "ids": Array [],
+  "loaded": false,
+  "loading": false,
+}
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthReducer  LOAD_LOGGED_USER_FAILURE should unset logged user on logged failure 1`] = `
+Object {
+  "user": null,
+}
+`;
+
+exports[`AuthReducer  LOAD_LOGGED_USER_SUCCESS should load user info 1`] = `
+Object {
+  "user": Object {
+    "firstname": "firstname",
+    "lastname": "lastname",
+  },
+}
+`;
+
+exports[`AuthReducer  LOG_OUT_SUCCESS should logout user 1`] = `
+Object {
+  "user": null,
+}
+`;
+
+exports[`AuthReducer  Selectors getUser should return user 1`] = `
+Object {
+  "firstname": "firstname",
+  "lastname": "firstname",
+}
+`;
+
+exports[`AuthReducer  undefined action should return the default state 1`] = `
+Object {
+  "user": null,
+}
+`;

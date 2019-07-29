@@ -1,0 +1,26 @@
+{
+  "name": "NgxDemo",
+  "short_name": "NgxDemo",
+  "theme_color": "#488aff",
+  "background_color": "#488aff",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/images/favicons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicons/favicon-194x194.png",
+      "sizes": "194x194",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicons/favicon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<section class="bg-white">
+  <div class="p-3">
+    {{ 'QUESTION_DELETE' | translate }} {{ 'CIVILITY_DELETE' | translate }}
+  </div>
+</section>
+<app-wrapper-validation-action>
+  <app-validation-button
+    (cancel)="onCancel()"
+    (confirm)="onDelete(civility)"
+    labelConfirm="{{ 'DELETE' | translate }}"
+    labelCancel="{{ 'CANCEL' | translate }}"
+    classConfirm="danger"
+    [confirmDisabled]="deleting"
+  ></app-validation-button>
+</app-wrapper-validation-action>

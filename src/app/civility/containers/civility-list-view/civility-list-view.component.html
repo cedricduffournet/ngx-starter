@@ -1,0 +1,11 @@
+<app-page-inner>
+  <div class="page-section">
+    <app-civility-items
+      [civilities]="civilities$ | async"
+      (delete)="onDelete($event)"
+      (update)="onUpdate($event)"
+      (add)="onAdd()"
+      [authorization]="authorization$ | async"
+    ></app-civility-items>
+  </div>
+</app-page-inner>

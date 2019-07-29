@@ -1,0 +1,11 @@
+<app-page-inner>
+  <div class="page-section">
+    <div class="row">
+      <div class="col-md-6" *ngIf="canViewCivility$ | async">
+        <app-referenced-table-menu
+          [canViewCivility]="canViewCivility$ | async"
+        ></app-referenced-table-menu>
+      </div>
+    </div>
+  </div>
+</app-page-inner>

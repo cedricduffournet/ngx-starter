@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WrapperValidationActionComponent should be created 1`] = `
+<app-wrapper-validation-action>
+  <div
+    class="d-flex justify-content-end align-items-center p-3"
+  />
+</app-wrapper-validation-action>
+`;

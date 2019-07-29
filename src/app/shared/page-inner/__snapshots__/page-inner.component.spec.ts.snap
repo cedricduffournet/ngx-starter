@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageInnerComponent should be created 1`] = `
+<app-page-inner
+  elemClass=""
+>
+  <div
+    class="px-3 py-3 "
+  />
+</app-page-inner>
+`;

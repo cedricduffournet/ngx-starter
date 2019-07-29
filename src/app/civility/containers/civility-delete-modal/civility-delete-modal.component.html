@@ -1,0 +1,8 @@
+<app-modal-wrapper title="{{ 'CONFIRM' | translate }}">
+  <app-civility-delete
+    [civility]="selectedCivility$ | async"
+    [deleting]="deleting$ | async"
+    (cancel)="onCancel()"
+    (delete)="onDelete($event)"
+  ></app-civility-delete>
+</app-modal-wrapper>

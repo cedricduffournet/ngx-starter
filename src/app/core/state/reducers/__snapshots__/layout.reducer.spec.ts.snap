@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutReducer Selectors getMenu shoud retrieve menu 1`] = `
+Array [
+  Object {
+    "cssClass": "cssClassMenu1",
+    "faIcon": Array [
+      "icon1, icone2",
+    ],
+    "name": "Menu 1",
+    "roles": Array [
+      "ROLE1",
+      "ROLE2",
+    ],
+    "route": Array [
+      "route1",
+    ],
+  },
+  Object {
+    "cssClass": "cssClassMenu2",
+    "faIcon": Array [
+      "icon3, icone4",
+    ],
+    "name": "Menu 2",
+    "roles": Array [
+      "ROLE3",
+      "ROLE4",
+    ],
+    "route": Array [
+      "route2",
+    ],
+  },
+]
+`;
+
+exports[`LayoutReducer Selectors getShowSidenav shoud retrieve ShowSidenav (true) 1`] = `true`;
+
+exports[`LayoutReducer TOGGLE_MENU should set showNavBar to false 1`] = `
+Object {
+  "menu": Array [
+    Object {
+      "cssClass": "pt-3",
+      "faIcon": Array [
+        "fa",
+        "home",
+      ],
+      "name": "HOME",
+      "roles": Array [
+        "ROLE_USER",
+      ],
+      "route": Array [
+        "dashboard",
+      ],
+    },
+    Object {
+      "cssClass": "pt-3 mt-3 border-top border-dark",
+      "faIcon": Array [
+        "fa",
+        "sliders-h",
+      ],
+      "name": "PARAMETERS",
+      "roles": Array [
+        "ROLE_COMPANY_VIEW_ALL",
+        "ROLE_USER_VIEW",
+        "ROLE_GROUP_VIEW",
+        "ROLE_CIVILITY_VIEW",
+      ],
+      "route": Array [
+        "parameters",
+      ],
+    },
+  ],
+  "showSidenav": false,
+}
+`;
+
+exports[`LayoutReducer TOGGLE_MENU should set showNavBar to true 1`] = `
+Object {
+  "menu": Array [
+    Object {
+      "cssClass": "pt-3",
+      "faIcon": Array [
+        "fa",
+        "home",
+      ],
+      "name": "HOME",
+      "roles": Array [
+        "ROLE_USER",
+      ],
+      "route": Array [
+        "dashboard",
+      ],
+    },
+    Object {
+      "cssClass": "pt-3 mt-3 border-top border-dark",
+      "faIcon": Array [
+        "fa",
+        "sliders-h",
+      ],
+      "name": "PARAMETERS",
+      "roles": Array [
+        "ROLE_COMPANY_VIEW_ALL",
+        "ROLE_USER_VIEW",
+        "ROLE_GROUP_VIEW",
+        "ROLE_CIVILITY_VIEW",
+      ],
+      "route": Array [
+        "parameters",
+      ],
+    },
+  ],
+  "showSidenav": true,
+}
+`;
+
+exports[`LayoutReducer undefined action should return the default state 1`] = `
+Object {
+  "menu": Array [
+    Object {
+      "cssClass": "pt-3",
+      "faIcon": Array [
+        "fa",
+        "home",
+      ],
+      "name": "HOME",
+      "roles": Array [
+        "ROLE_USER",
+      ],
+      "route": Array [
+        "dashboard",
+      ],
+    },
+    Object {
+      "cssClass": "pt-3 mt-3 border-top border-dark",
+      "faIcon": Array [
+        "fa",
+        "sliders-h",
+      ],
+      "name": "PARAMETERS",
+      "roles": Array [
+        "ROLE_COMPANY_VIEW_ALL",
+        "ROLE_USER_VIEW",
+        "ROLE_GROUP_VIEW",
+        "ROLE_CIVILITY_VIEW",
+      ],
+      "route": Array [
+        "parameters",
+      ],
+    },
+  ],
+  "showSidenav": false,
+}
+`;

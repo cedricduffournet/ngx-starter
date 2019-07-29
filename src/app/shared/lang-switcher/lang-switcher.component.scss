@@ -1,0 +1,5 @@
+@import 'src/variables.scss';
+
+.lang-switcher button:not(:first-child) {
+  margin-left:map-get($spacers, 1); 
+}

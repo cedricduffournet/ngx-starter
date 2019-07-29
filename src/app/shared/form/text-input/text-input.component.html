@@ -1,0 +1,39 @@
+<div class="form-group {{ formGroupClass }}">
+  <label class="control-label">{{ label }}</label>
+  <input
+    class="form-control"
+    [class.is-invalid]="isInvalid"
+    [type]="type"
+    [value]="value"
+    [placeholder]="placeholder"
+    (blur)="onTouched()"
+    (input)="onChange($event.target.value)"
+    [disabled]="isDisabled"
+  />
+  <div
+    class="invalid-feedback custom-error"
+    *ngIf="isInvalid && errorText != ''"
+  >
+    {{ errorText }}
+  </div>
+  <div class="invalid-feedback error-required" *ngIf="showErrorRequired">
+    {{ 'FIELD_IS_REQUIRED' | translate: { label: label } }}
+  </div>
+  <div class="invalid-feedback error-email" *ngIf="showErrorEmail">
+    {{ 'FIELD_EMAIL_INVALID' | translate: { label: label } }}
+  </div>
+  <div class="invalid-feedback error-password" *ngIf="showErrorPassword">
+    {{ 'FIELD_PASSWORD_INVALID' | translate: { label: label } }}
+  </div>
+  <div class="invalid-feedback error-max-length" *ngIf="errorMaxLength">
+    {{
+      'FIELD_MAX_LENGTH_INVALID'
+        | translate
+          : { label: label, requiredLength: errorMaxLength.requiredLength }
+    }}
+  </div>
+  <small class="form-text text-muted" *ngIf="helpText != ''">
+    {{ helpText }}
+  </small>
+  <ng-content></ng-content>
+</div>

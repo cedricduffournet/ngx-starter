@@ -1,0 +1,15 @@
+<ul class="pl-0 menu">
+  <li *ngFor="let menuItem of menu">
+    <a
+      class="text-white d-block py-2 {{ menuItem.cssClass }}"
+      routerLinkActive="active"
+      [routerLink]="menuItem.route"
+      (click)="onSelect(menuItem)"
+    >
+      <fa-layers [fixedWidth]="true">
+        <fa-icon [icon]="menuItem.faIcon"></fa-icon>
+      </fa-layers>
+      {{ menuItem.name | translate }}
+    </a>
+  </li>
+</ul>

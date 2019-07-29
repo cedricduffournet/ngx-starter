@@ -1,0 +1,667 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterForm should be created 1`] = `
+<app-register-form
+  errorUserExist="false"
+  processing="false"
+  register={[Function EventEmitter]}
+  submitted="false"
+  userFormService={[Function UserFormService]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-invalid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <div
+      class="form-group"
+    >
+      <label
+        class="control-label"
+        ng-reflect-translate=""
+        translate=""
+      >
+        CIVILITY
+      </label>
+      <select
+        class="form-control custom-select ng-untouched ng-pristine ng-invalid"
+        formcontrolname="civility"
+        ng-reflect-name="civility"
+      >
+        <option
+          ng-reflect-translate=""
+          translate=""
+          value="0: null"
+        >
+          CHOOSE
+        </option>
+        
+      </select>
+    </div>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="firstname"
+      ng-reflect-label="FIRST_NAME"
+      ng-reflect-name="firstname"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          FIRST_NAME
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="lastname"
+      ng-reflect-label="LASTNAME"
+      ng-reflect-name="lastname"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          LASTNAME
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="email"
+      ng-reflect-error-text=""
+      ng-reflect-label="EMAIL"
+      ng-reflect-name="email"
+      ng-reflect-show-error="false"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          EMAIL
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <div
+      class="form-row ng-untouched ng-pristine ng-invalid"
+      formgroupname="plainPassword"
+      ng-reflect-name="plainPassword"
+    >
+      <div
+        class="col-md-6"
+      >
+        <app-text-input
+          class="ng-untouched ng-pristine ng-invalid"
+          formcontrolname="first"
+          ng-reflect-help-text="HELP_PASSWORD_FIELD"
+          ng-reflect-label="PASSWORD"
+          ng-reflect-name="first"
+          ng-reflect-submitted="false"
+          ng-reflect-type="password"
+          type="password"
+        >
+          <div
+            class="form-group "
+          >
+            <label
+              class="control-label"
+            >
+              PASSWORD
+            </label>
+            <input
+              class="form-control"
+              placeholder=""
+              type="password"
+            />
+            
+            
+            
+            
+            
+            
+            <small
+              class="form-text text-muted"
+            >
+               HELP_PASSWORD_FIELD 
+            </small>
+          </div>
+        </app-text-input>
+      </div>
+      <div
+        class="col-md-6"
+      >
+        <app-text-input
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="second"
+          ng-reflect-error-text="FIELD_PASSWORD_MUST_BE_EQUAL"
+          ng-reflect-label="PASSWORD_CONFIRMATION"
+          ng-reflect-name="second"
+          ng-reflect-type="password"
+          type="password"
+        >
+          <div
+            class="form-group "
+          >
+            <label
+              class="control-label"
+            >
+              PASSWORD_CONFIRMATION
+            </label>
+            <input
+              class="form-control"
+              placeholder=""
+              type="password"
+            />
+            
+            
+            
+            
+            
+            
+          </div>
+        </app-text-input>
+      </div>
+    </div>
+    <div
+      class="form-group"
+    >
+      <button
+        class="btn btn-primary btn-lg btn-block"
+        ng-reflect-translate=""
+        translate=""
+        type="submit"
+      >
+         CREATE_ACCOUNT 
+      </button>
+    </div>
+  </form>
+</app-register-form>
+`;
+
+exports[`RegisterForm should disable submit button form if processing 1`] = `
+<app-register-form
+  errorUserExist="false"
+  processing={[Function Boolean]}
+  register={[Function EventEmitter]}
+  submitted="false"
+  userFormService={[Function UserFormService]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-invalid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <div
+      class="form-group"
+    >
+      <label
+        class="control-label"
+        ng-reflect-translate=""
+        translate=""
+      >
+        CIVILITY
+      </label>
+      <select
+        class="form-control custom-select ng-untouched ng-pristine ng-invalid"
+        formcontrolname="civility"
+        ng-reflect-name="civility"
+      >
+        <option
+          ng-reflect-translate=""
+          translate=""
+          value="0: null"
+        >
+          CHOOSE
+        </option>
+        
+      </select>
+    </div>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="firstname"
+      ng-reflect-label="FIRST_NAME"
+      ng-reflect-name="firstname"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          FIRST_NAME
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="lastname"
+      ng-reflect-label="LASTNAME"
+      ng-reflect-name="lastname"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          LASTNAME
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="email"
+      ng-reflect-error-text=""
+      ng-reflect-label="EMAIL"
+      ng-reflect-name="email"
+      ng-reflect-show-error="false"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          EMAIL
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <div
+      class="form-row ng-untouched ng-pristine ng-invalid"
+      formgroupname="plainPassword"
+      ng-reflect-name="plainPassword"
+    >
+      <div
+        class="col-md-6"
+      >
+        <app-text-input
+          class="ng-untouched ng-pristine ng-invalid"
+          formcontrolname="first"
+          ng-reflect-help-text="HELP_PASSWORD_FIELD"
+          ng-reflect-label="PASSWORD"
+          ng-reflect-name="first"
+          ng-reflect-submitted="false"
+          ng-reflect-type="password"
+          type="password"
+        >
+          <div
+            class="form-group "
+          >
+            <label
+              class="control-label"
+            >
+              PASSWORD
+            </label>
+            <input
+              class="form-control"
+              placeholder=""
+              type="password"
+            />
+            
+            
+            
+            
+            
+            
+            <small
+              class="form-text text-muted"
+            >
+               HELP_PASSWORD_FIELD 
+            </small>
+          </div>
+        </app-text-input>
+      </div>
+      <div
+        class="col-md-6"
+      >
+        <app-text-input
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="second"
+          ng-reflect-error-text="FIELD_PASSWORD_MUST_BE_EQUAL"
+          ng-reflect-label="PASSWORD_CONFIRMATION"
+          ng-reflect-name="second"
+          ng-reflect-type="password"
+          type="password"
+        >
+          <div
+            class="form-group "
+          >
+            <label
+              class="control-label"
+            >
+              PASSWORD_CONFIRMATION
+            </label>
+            <input
+              class="form-control"
+              placeholder=""
+              type="password"
+            />
+            
+            
+            
+            
+            
+            
+          </div>
+        </app-text-input>
+      </div>
+    </div>
+    <div
+      class="form-group"
+    >
+      <button
+        class="btn btn-primary btn-lg btn-block"
+        disabled=""
+        ng-reflect-translate=""
+        translate=""
+        type="submit"
+      >
+         CREATE_ACCOUNT 
+      </button>
+    </div>
+  </form>
+</app-register-form>
+`;
+
+exports[`RegisterForm should display user exist message if provided 1`] = `
+<app-register-form
+  errorUserExist={[Function Boolean]}
+  processing="false"
+  register={[Function EventEmitter]}
+  submitted="false"
+  userFormService={[Function UserFormService]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-invalid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <div
+      class="form-group"
+    >
+      <label
+        class="control-label"
+        ng-reflect-translate=""
+        translate=""
+      >
+        CIVILITY
+      </label>
+      <select
+        class="form-control custom-select ng-untouched ng-pristine ng-invalid"
+        formcontrolname="civility"
+        ng-reflect-name="civility"
+      >
+        <option
+          ng-reflect-translate=""
+          translate=""
+          value="0: null"
+        >
+          CHOOSE
+        </option>
+        
+      </select>
+    </div>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="firstname"
+      ng-reflect-label="FIRST_NAME"
+      ng-reflect-name="firstname"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          FIRST_NAME
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="lastname"
+      ng-reflect-label="LASTNAME"
+      ng-reflect-name="lastname"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          LASTNAME
+        </label>
+        <input
+          class="form-control"
+          placeholder=""
+          type="text"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="email"
+      ng-reflect-error-text="USER_EXIST"
+      ng-reflect-label="EMAIL"
+      ng-reflect-name="email"
+      ng-reflect-show-error="true"
+      ng-reflect-submitted="false"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          EMAIL
+        </label>
+        <input
+          class="form-control is-invalid"
+          placeholder=""
+          type="text"
+        />
+        
+        <div
+          class="invalid-feedback custom-error"
+        >
+           USER_EXIST 
+        </div>
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <div
+      class="form-row ng-untouched ng-pristine ng-invalid"
+      formgroupname="plainPassword"
+      ng-reflect-name="plainPassword"
+    >
+      <div
+        class="col-md-6"
+      >
+        <app-text-input
+          class="ng-untouched ng-pristine ng-invalid"
+          formcontrolname="first"
+          ng-reflect-help-text="HELP_PASSWORD_FIELD"
+          ng-reflect-label="PASSWORD"
+          ng-reflect-name="first"
+          ng-reflect-submitted="false"
+          ng-reflect-type="password"
+          type="password"
+        >
+          <div
+            class="form-group "
+          >
+            <label
+              class="control-label"
+            >
+              PASSWORD
+            </label>
+            <input
+              class="form-control"
+              placeholder=""
+              type="password"
+            />
+            
+            
+            
+            
+            
+            
+            <small
+              class="form-text text-muted"
+            >
+               HELP_PASSWORD_FIELD 
+            </small>
+          </div>
+        </app-text-input>
+      </div>
+      <div
+        class="col-md-6"
+      >
+        <app-text-input
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="second"
+          ng-reflect-error-text="FIELD_PASSWORD_MUST_BE_EQUAL"
+          ng-reflect-label="PASSWORD_CONFIRMATION"
+          ng-reflect-name="second"
+          ng-reflect-type="password"
+          type="password"
+        >
+          <div
+            class="form-group "
+          >
+            <label
+              class="control-label"
+            >
+              PASSWORD_CONFIRMATION
+            </label>
+            <input
+              class="form-control"
+              placeholder=""
+              type="password"
+            />
+            
+            
+            
+            
+            
+            
+          </div>
+        </app-text-input>
+      </div>
+    </div>
+    <div
+      class="form-group"
+    >
+      <button
+        class="btn btn-primary btn-lg btn-block"
+        ng-reflect-translate=""
+        translate=""
+        type="submit"
+      >
+         CREATE_ACCOUNT 
+      </button>
+    </div>
+  </form>
+</app-register-form>
+`;

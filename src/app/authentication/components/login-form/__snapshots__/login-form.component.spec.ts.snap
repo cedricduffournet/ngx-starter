@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm should be created 1`] = `
+<app-login-form
+  error="false"
+  formBuilder={[Function FormBuilder]}
+  login={[Function EventEmitter]}
+  loginForm={[Function FormGroup]}
+  processing="false"
+  submitted="false"
+>
+  <form
+    class="ng-untouched ng-pristine ng-invalid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="login"
+      ng-reflect-label="LOGIN"
+      ng-reflect-name="login"
+      ng-reflect-placeholder="PLACEHOLDER_LOGIN"
+      ng-reflect-submitted="false"
+      ng-reflect-type="email"
+      type="email"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          LOGIN
+        </label>
+        <input
+          class="form-control"
+          placeholder="PLACEHOLDER_LOGIN"
+          type="email"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="password"
+      ng-reflect-label="PASSWORD"
+      ng-reflect-name="password"
+      ng-reflect-placeholder="PLACEHOLDER_PASSWORD"
+      ng-reflect-submitted="false"
+      ng-reflect-type="password"
+      type="password"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          PASSWORD
+        </label>
+        <input
+          class="form-control"
+          placeholder="PLACEHOLDER_PASSWORD"
+          type="password"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <div
+      class="form-group"
+    >
+      <button
+        class="btn btn-primary btn-block btn-lg"
+        ng-reflect-translate=""
+        translate=""
+        type="submit"
+      >
+         CONNECT 
+      </button>
+    </div>
+    <a
+      class="btn btn-link btn-block"
+      href="/resetting"
+      ng-reflect-router-link="/resetting"
+      ng-reflect-translate=""
+      translate=""
+    >
+       RESET_PASSWORD 
+    </a>
+    <a
+      class="btn btn-link btn-block"
+      href="/register"
+      ng-reflect-router-link="/register"
+      ng-reflect-translate=""
+      translate=""
+    >
+       REGISTER 
+    </a>
+  </form>
+</app-login-form>
+`;
+
+exports[`LoginForm should disable submit button form if processing 1`] = `
+<app-login-form
+  error="false"
+  formBuilder={[Function FormBuilder]}
+  login={[Function EventEmitter]}
+  loginForm={[Function FormGroup]}
+  processing={[Function Boolean]}
+  submitted="false"
+>
+  <form
+    class="ng-untouched ng-pristine ng-invalid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="login"
+      ng-reflect-label="LOGIN"
+      ng-reflect-name="login"
+      ng-reflect-placeholder="PLACEHOLDER_LOGIN"
+      ng-reflect-submitted="false"
+      ng-reflect-type="email"
+      type="email"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          LOGIN
+        </label>
+        <input
+          class="form-control"
+          placeholder="PLACEHOLDER_LOGIN"
+          type="email"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="password"
+      ng-reflect-label="PASSWORD"
+      ng-reflect-name="password"
+      ng-reflect-placeholder="PLACEHOLDER_PASSWORD"
+      ng-reflect-submitted="false"
+      ng-reflect-type="password"
+      type="password"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          PASSWORD
+        </label>
+        <input
+          class="form-control"
+          placeholder="PLACEHOLDER_PASSWORD"
+          type="password"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <div
+      class="form-group"
+    >
+      <button
+        class="btn btn-primary btn-block btn-lg"
+        disabled=""
+        ng-reflect-translate=""
+        translate=""
+        type="submit"
+      >
+         CONNECT 
+      </button>
+    </div>
+    <a
+      class="btn btn-link btn-block"
+      href="/resetting"
+      ng-reflect-router-link="/resetting"
+      ng-reflect-translate=""
+      translate=""
+    >
+       RESET_PASSWORD 
+    </a>
+    <a
+      class="btn btn-link btn-block"
+      href="/register"
+      ng-reflect-router-link="/register"
+      ng-reflect-translate=""
+      translate=""
+    >
+       REGISTER 
+    </a>
+  </form>
+</app-login-form>
+`;
+
+exports[`LoginForm should display an error message if provided 1`] = `
+<app-login-form
+  error={[Function Boolean]}
+  formBuilder={[Function FormBuilder]}
+  login={[Function EventEmitter]}
+  loginForm={[Function FormGroup]}
+  processing="false"
+  submitted="false"
+>
+  <div
+    class="alert alert-danger"
+    ng-reflect-translate=""
+    translate=""
+  >
+     AUTHENTICATION_FAILED
+  
+  </div><form
+    class="ng-untouched ng-pristine ng-invalid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="login"
+      ng-reflect-label="LOGIN"
+      ng-reflect-name="login"
+      ng-reflect-placeholder="PLACEHOLDER_LOGIN"
+      ng-reflect-submitted="false"
+      ng-reflect-type="email"
+      type="email"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          LOGIN
+        </label>
+        <input
+          class="form-control"
+          placeholder="PLACEHOLDER_LOGIN"
+          type="email"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <app-text-input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="password"
+      ng-reflect-label="PASSWORD"
+      ng-reflect-name="password"
+      ng-reflect-placeholder="PLACEHOLDER_PASSWORD"
+      ng-reflect-submitted="false"
+      ng-reflect-type="password"
+      type="password"
+    >
+      <div
+        class="form-group "
+      >
+        <label
+          class="control-label"
+        >
+          PASSWORD
+        </label>
+        <input
+          class="form-control"
+          placeholder="PLACEHOLDER_PASSWORD"
+          type="password"
+        />
+        
+        
+        
+        
+        
+        
+      </div>
+    </app-text-input>
+    <div
+      class="form-group"
+    >
+      <button
+        class="btn btn-primary btn-block btn-lg"
+        ng-reflect-translate=""
+        translate=""
+        type="submit"
+      >
+         CONNECT 
+      </button>
+    </div>
+    <a
+      class="btn btn-link btn-block"
+      href="/resetting"
+      ng-reflect-router-link="/resetting"
+      ng-reflect-translate=""
+      translate=""
+    >
+       RESET_PASSWORD 
+    </a>
+    <a
+      class="btn btn-link btn-block"
+      href="/register"
+      ng-reflect-router-link="/register"
+      ng-reflect-translate=""
+      translate=""
+    >
+       REGISTER 
+    </a>
+  </form>
+</app-login-form>
+`;

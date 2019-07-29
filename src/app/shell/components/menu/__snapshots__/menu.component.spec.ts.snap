@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuComponent should be created 1`] = `
+<app-menu
+  menu={[Function Array]}
+  selectItem={[Function EventEmitter]}
+>
+  <ul
+    class="pl-0 menu"
+  >
+    
+    <li>
+      <a
+        class="text-white d-block py-2 pt-3"
+        href="/dashboard"
+        ng-reflect-router-link="dashboard"
+        ng-reflect-router-link-active="active"
+        routerlinkactive="active"
+      >
+        <fa-layers
+          class="fa-layers fa-fw"
+          ng-reflect-fixed-width="true"
+        >
+          <fa-icon
+            class="ng-fa-icon"
+            ng-reflect-icon-prop="fa,home"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-home fa-w-18"
+              data-icon="home"
+              data-prefix="fa"
+              focusable="false"
+              role="img"
+              viewBox="0 0 576 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"
+                fill="currentColor"
+              />
+            </svg>
+          </fa-icon>
+        </fa-layers>
+         HOME 
+      </a>
+    </li>
+    <li>
+      <a
+        class="text-white d-block py-2 pt-3 mt-3 border-top border-dark"
+        href="/parameters"
+        ng-reflect-router-link="parameters"
+        ng-reflect-router-link-active="active"
+        routerlinkactive="active"
+      >
+        <fa-layers
+          class="fa-layers fa-fw"
+          ng-reflect-fixed-width="true"
+        >
+          <fa-icon
+            class="ng-fa-icon"
+            ng-reflect-icon-prop="fa,sliders-h"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-sliders-h fa-w-16"
+              data-icon="sliders-h"
+              data-prefix="fa"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M496 384H160v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h80v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h336c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160h-80v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h336v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h80c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160H288V48c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16C7.2 64 0 71.2 0 80v32c0 8.8 7.2 16 16 16h208v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h208c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16z"
+                fill="currentColor"
+              />
+            </svg>
+          </fa-icon>
+        </fa-layers>
+         PARAMETERS 
+      </a>
+    </li>
+  </ul>
+</app-menu>
+`;

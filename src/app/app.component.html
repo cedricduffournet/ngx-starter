@@ -1,0 +1,21 @@
+<app-toaster></app-toaster>
+<app-http-progress-bar></app-http-progress-bar>
+<div
+  class="app-backdrop"
+  *ngIf="opened$ | async"
+  (click)="onToggleMenu()"
+></div>
+<app-navbar
+  *ngIf="loggedUser$ | async"
+  [pageTitle]="pageTitle$ | async"
+  [opened]="opened$ | async"
+  [loggedUser]="loggedUser$ | async"
+  (logout)="displayLogout()"
+  (toggleMenu)="onToggleMenu()"
+  [previousLink]="previousLink$ | async"
+  [menu]="userMenu$ | async"
+></app-navbar>
+
+<main class="app-main">
+  <router-outlet></router-outlet>
+</main>

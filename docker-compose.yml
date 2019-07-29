@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    angular:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+            args:
+                WORK_DIR: /var/www/dist/prod
+        ports:
+          - 82:80

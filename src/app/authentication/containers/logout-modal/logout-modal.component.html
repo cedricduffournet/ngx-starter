@@ -1,0 +1,15 @@
+<app-modal-wrapper title="{{ 'CONFIRM' | translate }}">
+  <section class="bg-white">
+    <div class="p-3" translate>
+      CONFIRM_LOGOUT
+    </div>
+  </section>
+  <app-wrapper-validation-action>
+    <app-validation-button
+      (cancel)="onCancel()"
+      (confirm)="onConfirm()"
+      labelCancel="{{ 'NO' | translate }}"
+      labelConfirm="{{ 'YES' | translate }}"
+    ></app-validation-button>
+  </app-wrapper-validation-action>
+</app-modal-wrapper>

@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CivilitiyEntitiesReducer ADD_SUCCESS should add a new civility id 3 1`] = `
+Object {
+  "entities": Object {
+    "1": Object {
+      "code": "Mr",
+      "id": 1,
+      "name": "Mister",
+    },
+    "2": Object {
+      "code": "Mr",
+      "id": 2,
+      "name": "Miss",
+    },
+    "3": Object {
+      "code": "AddCode",
+      "name": "AddName",
+    },
+  },
+  "selectedId": null,
+  "updated": false,
+  "updating": false,
+}
+`;
+
+exports[`CivilitiyEntitiesReducer LOAD_SUCCESS should return state with civility entities 1`] = `
+Object {
+  "entities": Object {
+    "1": Object {
+      "code": "Mr",
+      "name": "Mister",
+    },
+    "2": Object {
+      "code": "Mr",
+      "name": "Miss",
+    },
+  },
+  "selectedId": null,
+  "updated": false,
+  "updating": false,
+}
+`;
+
+exports[`CivilitiyEntitiesReducer SELECT should set selected civility (id 1) 1`] = `
+Object {
+  "entities": Object {
+    "1": Object {
+      "code": "Mr",
+      "id": 1,
+      "name": "Mister",
+    },
+    "2": Object {
+      "code": "Mr",
+      "id": 2,
+      "name": "Miss",
+    },
+  },
+  "selectedId": 1,
+  "updated": false,
+  "updating": false,
+}
+`;
+
+exports[`CivilitiyEntitiesReducer Selectors getEntities should return entities 1`] = `
+Object {
+  "1": Object {
+    "code": "Mr",
+    "id": 1,
+    "name": "Mister",
+  },
+  "2": Object {
+    "code": "Mr",
+    "id": 2,
+    "name": "Miss",
+  },
+}
+`;
+
+exports[`CivilitiyEntitiesReducer Selectors getSelectedId should return selected id (1) 1`] = `1`;
+
+exports[`CivilitiyEntitiesReducer Selectors getUpdated should return updated true 1`] = `true`;
+
+exports[`CivilitiyEntitiesReducer Selectors getUpdating should return updating true 1`] = `true`;
+
+exports[`CivilitiyEntitiesReducer UPDATE should set updating to true 1`] = `
+Object {
+  "entities": Object {},
+  "selectedId": null,
+  "updated": false,
+  "updating": true,
+}
+`;
+
+exports[`CivilitiyEntitiesReducer UPDATE_FAILURE & SHOW_MODAL_UPDATE should set updating to false 1`] = `
+Object {
+  "entities": Object {
+    "1": Object {
+      "code": "Mr",
+      "id": 1,
+      "name": "Mister",
+    },
+  },
+  "selectedId": null,
+  "updated": false,
+  "updating": false,
+}
+`;
+
+exports[`CivilitiyEntitiesReducer UPDATE_FAILURE & SHOW_MODAL_UPDATE should set updating to false, updated to false when show modal 1`] = `
+Object {
+  "entities": Object {
+    "1": Object {
+      "code": "Mr",
+      "id": 1,
+      "name": "Mister",
+    },
+  },
+  "selectedId": null,
+  "updated": false,
+  "updating": false,
+}
+`;
+
+exports[`CivilitiyEntitiesReducer UPDATE_SUCCESS should update civility id 1, upated should be true and updating false 1`] = `
+Object {
+  "entities": Object {
+    "1": Object {
+      "code": "MrUpdated",
+      "name": "MisterUpdated",
+    },
+    "2": Object {
+      "code": "Mr",
+      "id": 2,
+      "name": "Miss",
+    },
+  },
+  "selectedId": null,
+  "updated": true,
+  "updating": false,
+}
+`;
+
+exports[`CivilitiyEntitiesReducer undefined action should return the default state 1`] = `
+Object {
+  "entities": Object {},
+  "selectedId": null,
+  "updated": false,
+  "updating": false,
+}
+`;

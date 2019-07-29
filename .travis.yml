@@ -1,0 +1,24 @@
+sudo: false
+language: node_js
+node_js: "10"
+
+services:
+  - xvfb
+
+before_install:
+- rm -rf node_modules
+- npm install -g yarn
+
+install:
+  - yarn install
+
+jobs:
+  include:
+  - stage: Testing
+    script: yarn lint
+    name: "Lint"
+  - script: yarn test:coverage
+    name: "Execute jest tests"
+    after_success: ./node_modules/.bin/codecov
+  - script: yarn build
+    name: "Execute prod build"

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParameterCivilityComponent should be created 1`] = `
+<app-referenced-table-menu
+  canViewCivility="false"
+>
+  <div
+    class="card"
+  >
+    <div
+      class="card-header"
+      translate=""
+    >
+       REFERENCED_TABLE 
+    </div>
+    <ul
+      class="list-group list-group-flush"
+    >
+      <li
+        class="list-group-item"
+      >
+        
+      </li>
+    </ul>
+  </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</app-referenced-table-menu>
+`;
+
+exports[`ParameterCivilityComponent should display civility menu 1`] = `
+<app-referenced-table-menu
+  canViewCivility={[Function Boolean]}
+>
+  <div
+    class="card"
+  >
+    <div
+      class="card-header"
+      translate=""
+    >
+       REFERENCED_TABLE 
+    </div>
+    <ul
+      class="list-group list-group-flush"
+    >
+      <li
+        class="list-group-item"
+      >
+        
+        <a
+          href="/civilities"
+          ng-reflect-router-link="civilities"
+          translate=""
+        >
+           CIVILITIES 
+        </a>
+      </li>
+    </ul>
+  </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</app-referenced-table-menu>
+`;

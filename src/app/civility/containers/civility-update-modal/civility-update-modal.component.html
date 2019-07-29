@@ -1,0 +1,8 @@
+<app-modal-wrapper title="{{ 'EDIT_CIVILITY_TITLE' | translate }}">
+  <app-civility-update
+    [civility]="selectedCivility$ | async"
+    (cancel)="onCancel()"
+    (update)="onUpdate($event)"
+    [updating]="updating$ | async"
+  ></app-civility-update>
+</app-modal-wrapper>

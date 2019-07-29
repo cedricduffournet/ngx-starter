@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalWrapperComponent should be created 1`] = `
+<app-modal-wrapper
+  title=""
+>
+  <div
+    class="modal-content bg-light"
+  >
+    
+    <div
+      class="modal-body p-0"
+    />
+  </div>
+</app-modal-wrapper>
+`;
+
+exports[`ModalWrapperComponent should be created with title 1`] = `
+<app-modal-wrapper
+  title={[Function String]}
+>
+  <div
+    class="modal-content bg-light"
+  >
+    
+    <div
+      class="modal-header"
+    >
+      <h4
+        class="modal-title"
+      >
+        test title
+      </h4>
+    </div>
+    <div
+      class="modal-body p-0"
+    />
+  </div>
+</app-modal-wrapper>
+`;

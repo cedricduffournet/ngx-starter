@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HttpProgressBar should be created 1`] = `
+<app-http-progress-bar
+  processing$={[Function Store]}
+  store={[Function MockStore]}
+>
+  
+</app-http-progress-bar>
+`;
+
+exports[`HttpProgressBar should display progress bar 1`] = `
+<app-http-progress-bar
+  processing$={[Function Store]}
+  store={[Function MockStore]}
+>
+  <div
+    class="progress"
+  >
+    <div
+      class="indeterminate"
+    />
+  </div>
+</app-http-progress-bar>
+`;

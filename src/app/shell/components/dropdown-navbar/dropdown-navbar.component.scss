@@ -1,0 +1,12 @@
+@import 'src/variables.scss';
+
+.disconnect {
+  padding: 0 0 0 $spacer;
+  margin-bottom: 0;
+  > li {
+    display: inline-block;
+    > a {
+      font-size: $font-size-lg;
+    }
+  }
+}

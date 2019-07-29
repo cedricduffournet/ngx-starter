@@ -1,0 +1,11 @@
+<div class="lang-switcher" *ngIf="current$ | async as current">
+  <button
+    *ngFor="let lang of langs"
+    type="button"
+    [ngClass]="{ 'btn-light': current !== lang, 'btn-info': current === lang }"
+    class="btn btn-sm {{ current }}"
+    (click)="onSwitch(lang)"
+  >
+    {{ lang | uppercase }}
+  </button>
+</div>
