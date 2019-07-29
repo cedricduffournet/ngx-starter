@@ -22,7 +22,7 @@ exports[`ParameterCivilityComponent should be created 1`] = `
         
       </li>
     </ul>
-  </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </div>
 </app-referenced-table-menu>
 `;
 
@@ -55,6 +55,6 @@ exports[`ParameterCivilityComponent should display civility menu 1`] = `
         </a>
       </li>
     </ul>
-  </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </div>
 </app-referenced-table-menu>
 `;
