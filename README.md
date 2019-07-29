@@ -62,6 +62,14 @@ The project can run as docker container. This will run application build with ng
 
 - `make dev` - then navigate to <http://localhost:82>
 
+## Use shematics
+
+Easy way to create CRUD feature module (more info [here](https://github.com/cedricduffournet/schematics-ngx-starter) )
+
+```bash
+ng generate @cedricduff/schematics-ngx-starter:crud MyFeature
+```
+
 ## Included
 
 - [RxJS](https://github.com/ReactiveX/rxjs) - Reactive Extensions Library for JavaScript
