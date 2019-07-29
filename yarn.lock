@@ -356,6 +356,13 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@cedricduff/schematics-ngx-starter@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@cedricduff/schematics-ngx-starter/-/schematics-ngx-starter-1.0.0.tgz#2c7b4c9a0004af1582331d10b52bc1560a7a0cc9"
+  integrity sha512-WY013OOY3JTqXA82czm0zM16yShlEh8s2MU7fIVZQHE0BLAudDPLQgg/t7ZfnVcM9ZuLayGDgwVQBRImdvssdA==
+  dependencies:
+    tslib "^1.9.0"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
