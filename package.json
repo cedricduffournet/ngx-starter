@@ -20,7 +20,7 @@
     "jest:test": "jest",
     "jest:test:watch": "jest --watch",
     "jest:snapshot": "jest -u",
-    "jest:coverage": "jest --coverage  -u",
+    "jest:coverage": "jest --coverage",
     "clean:dist": "./node_modules/.bin/rimraf dist",
     "clean:package": "./node_modules/.bin/rimraf node_modules",
     "clean:all": "yarn clean:dist && yarn clean:package"
