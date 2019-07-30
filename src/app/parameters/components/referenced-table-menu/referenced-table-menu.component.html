@@ -3,8 +3,8 @@
     REFERENCED_TABLE
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      <a *ngIf="canViewCivility" [routerLink]="['civilities']" translate>
+    <li *ngIf="canViewCivility" class="list-group-item">
+      <a [routerLink]="['civilities']" translate>
         CIVILITIES
       </a>
     </li>
