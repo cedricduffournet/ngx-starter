@@ -16,11 +16,7 @@ exports[`ParameterCivilityComponent should be created 1`] = `
     <ul
       class="list-group list-group-flush"
     >
-      <li
-        class="list-group-item"
-      >
-        
-      </li>
+      
     </ul>
   </div>
 </app-referenced-table-menu>
@@ -42,10 +38,10 @@ exports[`ParameterCivilityComponent should display civility menu 1`] = `
     <ul
       class="list-group list-group-flush"
     >
+      
       <li
         class="list-group-item"
       >
-        
         <a
           href="/civilities"
           ng-reflect-router-link="civilities"
