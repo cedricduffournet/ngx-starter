@@ -34,7 +34,7 @@ export class HttpService {
     return `${this.getApiHost()}${this.getApiPublicBasePath()}`;
   }
 
-  get<T>(url: string, params: HttpParams = new HttpParams()): Observable<any> {
+  get<T>(url: string, params: HttpParams = new HttpParams()): Observable<T> {
     return this.http.get<T>(
       `${this.getApiPath()}${url}${this.getApiSuffix()}`,
       { headers: this.headers, params }
@@ -44,14 +44,14 @@ export class HttpService {
   getPublic<T>(
     url: string,
     params: HttpParams = new HttpParams()
-  ): Observable<any> {
+  ): Observable<T> {
     return this.http.get<T>(
       `${this.getApiPublicPath()}${url}${this.getApiSuffix()}`,
       { headers: this.headers, params }
     );
   }
 
-  post<T>(url: string, body: any | null): Observable<any> {
+  post<T>(url: string, body: any | null): Observable<T> {
     return this.http.post<T>(
       `${this.getApiPath()}${url}${this.getApiSuffix()}`,
       body,
@@ -59,7 +59,7 @@ export class HttpService {
     );
   }
 
-  postPublic<T>(url: string, body: any | null): Observable<any> {
+  postPublic<T>(url: string, body: any | null): Observable<T> {
     return this.http.post<T>(
       `${this.getApiPublicPath()}${url}${this.getApiSuffix()}`,
       body,
@@ -67,13 +67,13 @@ export class HttpService {
     );
   }
 
-  postHost<T>(url: string, body: any | null): Observable<any> {
+  postHost<T>(url: string, body: any | null): Observable<T> {
     return this.http.post<T>(`${this.getApiHost()}${url}`, body, {
       headers: this.headers
     });
   }
 
-  put<T>(url: string, body: any | null): Observable<any> {
+  put<T>(url: string, body: any | null): Observable<T> {
     return this.http.put<T>(
       `${this.getApiPath()}${url}${this.getApiSuffix()}`,
       body,
