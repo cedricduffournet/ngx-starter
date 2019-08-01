@@ -5,6 +5,7 @@ import {
   combineReducers
 } from '@ngrx/store';
 
+import { User } from '@app/user/models/User';
 import * as fromRoot from '@app/core/state/reducers';
 import * as fromAuth from '@app/authentication/state/reducers/auth.reducer';
 import * as fromLoginView from '@app/authentication/state/reducers/login-view.reducer';
@@ -43,20 +44,19 @@ export const getIsLogged = createSelector(
   user => !!user
 );
 
-export const getAuthorized = (roles: string[]) =>
-  createSelector(
-    getLoggedUser,
-    user => {
-      if (!user) {
-        return false;
-      }
-      return roles.some((element: string) => {
-        return user.roles.some((element2: string) => {
-          return element2 === element;
-        });
-      });
+export const getAuthorized = createSelector(
+  getLoggedUser,
+  (user: User | null, props: any) => {
+    if (!user) {
+      return false;
     }
-  );
+    return props.roles.some((element: string) => {
+      return user.roles.some((element2: string) => {
+        return element2 === element;
+      });
+    });
+  }
+);
 
 export const selectLoginViewState = createSelector(
   selectAuthState,

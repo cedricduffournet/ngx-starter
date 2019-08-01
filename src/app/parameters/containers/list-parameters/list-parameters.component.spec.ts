@@ -8,6 +8,7 @@ import { PageInnerModule } from '@app/shared/page-inner/page-inner.module';
 
 import { ListParametersComponent } from '@app/parameters/containers';
 import { ReferencedTableMenuComponent } from '@app/parameters/components';
+import { AuthFacade } from '@app/authentication/state/auth.facade';
 
 describe('ParameterCivilityComponent', () => {
   let fixture: ComponentFixture<ListParametersComponent>;
@@ -17,7 +18,7 @@ describe('ParameterCivilityComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, CommonModule, PageInnerModule],
       declarations: [ListParametersComponent, ReferencedTableMenuComponent],
-      providers: [provideMockStore()]
+      providers: [provideMockStore(), AuthFacade]
     });
 
     fixture = TestBed.createComponent(ListParametersComponent);

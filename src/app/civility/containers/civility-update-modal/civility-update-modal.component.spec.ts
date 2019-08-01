@@ -1,31 +1,27 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { of } from 'rxjs';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Store, MemoizedSelector } from '@ngrx/store';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
+import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { FormModule } from '@app/shared/form';
 import { ValidationActionModule } from '@app/shared/validation-action';
 import { ModalWrapperModule } from '@app/shared/modal';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
 
 import {
   CivilityUpdateComponent,
   CivilityFormComponent
 } from '@app/civility/components';
 import { CivilityUpdateModalComponent } from '@app/civility/containers';
-import * as fromCivilities from '@app/civility/state/reducers';
-
-import { CivilityUpdateModalActions } from '@app/civility/state/actions';
 import { Civility } from '@app/civility/models/civility';
 
 describe('UpdateCivilityModalComponent', () => {
   let fixture: ComponentFixture<CivilityUpdateModalComponent>;
   let component: CivilityUpdateModalComponent;
-  let store: MockStore<fromCivilities.State>;
-  let updated: MemoizedSelector<fromCivilities.State, boolean>;
-  let civility: MemoizedSelector<fromCivilities.State, Civility>;
+  let facade: CivilityFacade;
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -40,22 +36,26 @@ describe('UpdateCivilityModalComponent', () => {
         ModalWrapperModule,
         ReactiveFormsModule
       ],
-      providers: [provideMockStore(), BsModalRef]
+      providers: [
+        provideMockStore(),
+        BsModalRef,
+        {
+          provide: CivilityFacade,
+          useValue: {
+            selected$: of({
+              code: 'TestCode',
+              name: 'TestName'
+            }),
+            updated$: of(false),
+            updateCivility: jest.fn()
+          }
+        }
+      ]
     });
 
     fixture = TestBed.createComponent(CivilityUpdateModalComponent);
     component = fixture.componentInstance;
-    store = TestBed.get(Store);
-    updated = store.overrideSelector(
-      fromCivilities.getCivilityEntitiesUpdated,
-      false
-    );
-    civility = store.overrideSelector(fromCivilities.getSelectedCivility, {
-      id: 1,
-      name: 'name',
-      code: 'code'
-    });
-    spyOn(store, 'dispatch');
+    facade = TestBed.get(CivilityFacade);
   });
 
   it('should be created', () => {
@@ -64,7 +64,8 @@ describe('UpdateCivilityModalComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should dispatch a deleteCivility event on submit', () => {
+  it('should call updateCivility event on submit', () => {
+    spyOn(facade, 'updateCivility');
     const data = {
       id: 1,
       civility: {
@@ -72,24 +73,29 @@ describe('UpdateCivilityModalComponent', () => {
         name: 'name'
       } as Civility
     };
-    const action = CivilityUpdateModalActions.updateCivility({ data });
     fixture.detectChanges();
     component.onUpdate(data);
-
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.updateCivility).toHaveBeenCalledWith(data);
   });
 
-  it('should close modal after civility added', () => {
+  it('should close if civility updated', () => {
     spyOn(component.bsModalRef, 'hide');
+    facade.updated$ = of(true);
     fixture.detectChanges();
-    updated.setResult(true);
-    store.setState({} as any);
     expect(component.bsModalRef.hide).toHaveBeenCalled();
   });
 
   it('should close modal on cancel', () => {
     spyOn(component.bsModalRef, 'hide');
+    fixture.detectChanges();
     component.onCancel();
     expect(component.bsModalRef.hide).toHaveBeenCalled();
+  });
+
+  it('should unsubscribe subscription when destroyed', () => {
+    fixture.detectChanges();
+    spyOn(component.subscription, 'unsubscribe');
+    component.ngOnDestroy();
+    expect(component.subscription.unsubscribe).toHaveBeenCalled();
   });
 });

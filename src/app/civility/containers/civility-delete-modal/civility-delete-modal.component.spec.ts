@@ -1,7 +1,7 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 
-import { Store, MemoizedSelector } from '@ngrx/store';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
+import { of } from 'rxjs';
+import { provideMockStore } from '@ngrx/store/testing';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -9,15 +9,14 @@ import { ModalWrapperModule } from '@app/shared/modal';
 import { ValidationActionModule } from '@app/shared/validation-action';
 import { CivilityDeleteComponent } from '@app/civility/components';
 import { CivilityDeleteModalComponent } from '@app/civility/containers';
-import * as fromCivilities from '@app/civility/state/reducers';
-import { CivilityDeleteModalActions } from '@app/civility/state/actions';
 import { Civility } from '@app/civility/models/civility';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
 
 describe('DeleteCivilityModalComponent', () => {
   let fixture: ComponentFixture<CivilityDeleteModalComponent>;
   let component: CivilityDeleteModalComponent;
-  let store: MockStore<fromCivilities.State>;
-  let deleted: MemoizedSelector<fromCivilities.State, boolean>;
+  let facade: CivilityFacade;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CivilityDeleteComponent, CivilityDeleteModalComponent],
@@ -26,17 +25,22 @@ describe('DeleteCivilityModalComponent', () => {
         ModalWrapperModule,
         ValidationActionModule
       ],
-      providers: [provideMockStore(), BsModalRef]
+      providers: [
+        provideMockStore(),
+        BsModalRef,
+        {
+          provide: CivilityFacade,
+          useValue: {
+            deleted$: of(false),
+            deleteCivility: jest.fn()
+          }
+        }
+      ]
     });
 
+    facade = TestBed.get(CivilityFacade);
     fixture = TestBed.createComponent(CivilityDeleteModalComponent);
     component = fixture.componentInstance;
-    store = TestBed.get(Store);
-    deleted = store.overrideSelector(
-      fromCivilities.getCivilityCollectionDeleted,
-      false
-    );
-    spyOn(store, 'dispatch');
   });
 
   it('should be created', () => {
@@ -45,30 +49,35 @@ describe('DeleteCivilityModalComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should dispatch a deleteCivility event on submit', () => {
+  it('should call deleteCivility event on submit', () => {
+    spyOn(facade, 'deleteCivility');
     const civility = {
-      id: 1,
       code: 'code',
       name: 'name'
     } as Civility;
-    const action = CivilityDeleteModalActions.deleteCivility({ civility });
     fixture.detectChanges();
     component.onDelete(civility);
-
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.deleteCivility).toHaveBeenCalledWith(civility);
   });
 
-  it('should close modal after civility added', () => {
+  it('should close if civility deleted', () => {
     spyOn(component.bsModalRef, 'hide');
+    facade.deleted$ = of(true);
     fixture.detectChanges();
-    deleted.setResult(true);
-    store.setState({} as any);
     expect(component.bsModalRef.hide).toHaveBeenCalled();
   });
 
   it('should close modal on cancel', () => {
+    fixture.detectChanges();
     spyOn(component.bsModalRef, 'hide');
     component.onCancel();
     expect(component.bsModalRef.hide).toHaveBeenCalled();
+  });
+
+  it('should unsubscribe subscription when destroyed', () => {
+    fixture.detectChanges();
+    spyOn(component.subscription, 'unsubscribe');
+    component.ngOnDestroy();
+    expect(component.subscription.unsubscribe).toHaveBeenCalled();
   });
 });

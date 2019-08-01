@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { SharedModule } from '@app/shared/shared.module';
 import { CivilityEffects } from '@app/civility/state/effects';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
 import {
   CivilityAddComponent,
   CivilityUpdateComponent,
@@ -47,7 +48,8 @@ import { CoalescingComponentFactoryResolver } from '@app/coalescing-component-fa
     CivilityAddModalComponent,
     CivilityDeleteModalComponent
   ],
-  exports: [CivilityListViewComponent]
+  exports: [CivilityListViewComponent],
+  providers: [CivilityFacade]
 })
 export class CivilityModule {
   // see https://github.com/angular/angular/issues/14324

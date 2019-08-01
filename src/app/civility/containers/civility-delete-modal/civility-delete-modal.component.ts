@@ -1,13 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Store, select } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-import * as fromCivilities from '@app/civility/state/reducers';
-import { CivilityDeleteModalActions } from '@app/civility/state/actions';
 import { Civility } from '@app/civility/models/civility';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
 
 @Component({
   selector: 'app-civility-delete-modal',
@@ -19,21 +17,12 @@ export class CivilityDeleteModalComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   selectedCivility$: Observable<Civility>;
 
-  constructor(
-    public bsModalRef: BsModalRef,
-    public store: Store<fromCivilities.State>
-  ) {}
+  constructor(public bsModalRef: BsModalRef, public facade: CivilityFacade) {}
 
   ngOnInit() {
-    this.selectedCivility$ = this.store.pipe(
-      select(fromCivilities.getSelectedCivility)
-    );
-    this.deleted$ = this.store.pipe(
-      select(fromCivilities.getCivilityCollectionDeleted)
-    );
-    this.deleting$ = this.store.pipe(
-      select(fromCivilities.getCivilityCollectionDeleting)
-    );
+    this.selectedCivility$ = this.facade.selected$;
+    this.deleted$ = this.facade.deleted$;
+    this.deleting$ = this.facade.deleting$;
 
     this.subscription = this.deleted$
       .pipe(filter(deleted => deleted))
@@ -49,8 +38,6 @@ export class CivilityDeleteModalComponent implements OnInit, OnDestroy {
   }
 
   onDelete(civility: Civility) {
-    this.store.dispatch(
-      CivilityDeleteModalActions.deleteCivility({ civility })
-    );
+    this.facade.deleteCivility(civility);
   }
 }

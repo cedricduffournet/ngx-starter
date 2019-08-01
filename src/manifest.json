@@ -1,6 +1,6 @@
 {
-  "name": "NgxDemo",
-  "short_name": "NgxDemo",
+  "name": "NgxStarter",
+  "short_name": "NgxStarter",
   "theme_color": "#488aff",
   "background_color": "#488aff",
   "scope": "/",

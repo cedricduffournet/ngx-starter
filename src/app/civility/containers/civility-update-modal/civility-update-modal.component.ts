@@ -1,13 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Store, select } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-import * as fromCivilities from '@app/civility/state/reducers';
-import { CivilityUpdateModalActions } from '@app/civility/state/actions';
 import { Civility } from '@app/civility/models/civility';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
 
 @Component({
   selector: 'app-civility-update-modal',
@@ -19,21 +17,12 @@ export class CivilityUpdateModalComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   selectedCivility$: Observable<Civility>;
 
-  constructor(
-    public bsModalRef: BsModalRef,
-    public store: Store<fromCivilities.State>
-  ) {}
+  constructor(public bsModalRef: BsModalRef, public facade: CivilityFacade) {}
 
   ngOnInit() {
-    this.selectedCivility$ = this.store.pipe(
-      select(fromCivilities.getSelectedCivility)
-    );
-    this.updated$ = this.store.pipe(
-      select(fromCivilities.getCivilityEntitiesUpdated)
-    );
-    this.updating$ = this.store.pipe(
-      select(fromCivilities.getCivilityEntitiesUpdating)
-    );
+    this.selectedCivility$ = this.facade.selected$;
+    this.updated$ = this.facade.updated$;
+    this.updating$ = this.facade.updating$;
 
     this.subscription = this.updated$
       .pipe(filter(updated => updated))
@@ -49,6 +38,6 @@ export class CivilityUpdateModalComponent implements OnInit, OnDestroy {
   }
 
   onUpdate(data: { id: number; civility: Civility }) {
-    this.store.dispatch(CivilityUpdateModalActions.updateCivility({ data }));
+    this.facade.updateCivility(data);
   }
 }

@@ -1,5 +1,4 @@
 import * as fromCivilities from '@app/civility/state/reducers';
-import { User } from '@app/user/models/User';
 
 describe('CivilityReducer ', () => {
   const initialState: fromCivilities.CivilitiesState = {
@@ -222,36 +221,6 @@ describe('CivilityReducer ', () => {
           id: 1,
           code: 'Mr',
           name: 'Mister'
-        });
-      });
-    });
-
-    describe('canUpdateCivility', () => {
-      it('should return if can update civility', () => {
-        expect(fromCivilities.canUpdateCivility.projector(true)).toBe(true);
-      });
-    });
-
-    describe('canDeleteCivility', () => {
-      it('should return if can delete civility', () => {
-        expect(fromCivilities.canDeleteCivility.projector(true)).toBe(true);
-      });
-    });
-
-    describe('canCreateCivility', () => {
-      it('should return if can create civility', () => {
-        expect(fromCivilities.canCreateCivility.projector(true)).toBe(true);
-      });
-    });
-
-    describe('getCivilityAuthorization', () => {
-      it('should return civility authorization', () => {
-        expect(
-          fromCivilities.getCivilityAuthorization.projector(true, true, false)
-        ).toStrictEqual({
-          update: true,
-          delete: true,
-          create: false
         });
       });
     });

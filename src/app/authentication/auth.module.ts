@@ -10,6 +10,8 @@ import { LogoModule } from '@app/shared/logo/logo.module';
 import { AuthRoutingModule } from '@app/authentication/auth-routing.module';
 import { AuthEffects } from '@app/authentication/state/effects';
 import { reducers } from '@app/authentication/state/reducers';
+import { AuthFacade } from '@app/authentication/state/auth.facade';
+
 import {
   LoginViewComponent,
   SendResetPasswordViewComponent,
@@ -50,6 +52,7 @@ import {
     LogoutModalComponent,
     RegisterFormComponent
   ],
-  entryComponents: [LogoutModalComponent]
+  entryComponents: [LogoutModalComponent],
+  providers: [AuthFacade]
 })
 export class AuthModule {}

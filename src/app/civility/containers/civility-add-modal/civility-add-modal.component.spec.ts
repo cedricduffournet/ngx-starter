@@ -1,8 +1,8 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { Store, MemoizedSelector } from '@ngrx/store';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
+import { of } from 'rxjs';
+import { provideMockStore } from '@ngrx/store/testing';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -11,19 +11,17 @@ import { ValidationActionModule } from '@app/shared/validation-action';
 import { ModalWrapperModule } from '@app/shared/modal';
 
 import { CivilityAddModalComponent } from '@app/civility/containers';
-import { CivilityAddModalActions } from '@app/civility/state/actions';
 import {
   CivilityAddComponent,
   CivilityFormComponent
 } from '@app/civility/components';
 import { Civility } from '@app/civility/models/civility';
-import * as fromCivilities from '@app/civility/state/reducers';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
 
 describe('CivilityAddModalComponent', () => {
   let fixture: ComponentFixture<CivilityAddModalComponent>;
   let component: CivilityAddModalComponent;
-  let store: MockStore<fromCivilities.State>;
-  let added: MemoizedSelector<fromCivilities.State, boolean>;
+  let facade: CivilityFacade;
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -38,17 +36,23 @@ describe('CivilityAddModalComponent', () => {
         ReactiveFormsModule,
         ModalWrapperModule
       ],
-      providers: [provideMockStore(), BsModalRef]
+      providers: [
+        provideMockStore(),
+        BsModalRef,
+        {
+          provide: CivilityFacade,
+          useValue: {
+            added$: of(false),
+            addCivility: jest.fn()
+          }
+        }
+      ]
     });
+
+    facade = TestBed.get(CivilityFacade);
 
     fixture = TestBed.createComponent(CivilityAddModalComponent);
     component = fixture.componentInstance;
-    store = TestBed.get(Store);
-    added = store.overrideSelector(
-      fromCivilities.getCivilityCollectionAdded,
-      false
-    );
-    spyOn(store, 'dispatch');
   });
 
   it('should be created', () => {
@@ -57,30 +61,36 @@ describe('CivilityAddModalComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should dispatch a addCivility event on submit', () => {
+  it('should call addCivility event on submit', () => {
+    spyOn(facade, 'addCivility');
     const civility = {
       code: 'code',
       name: 'name'
     } as Civility;
-    const action = CivilityAddModalActions.addCivility({ civility });
     fixture.detectChanges();
     component.onAdd(civility);
-
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.addCivility).toHaveBeenCalledWith(civility);
   });
 
-  it('should close modal after civility added', () => {
+  it('should close if civility added', () => {
     spyOn(component.bsModalRef, 'hide');
+    facade.added$ = of(true);
     fixture.detectChanges();
-    added.setResult(true);
-    // need this to trigger state change (see : https://github.com/ngrx/platform/issues/2000)
-    store.setState({} as any);
     expect(component.bsModalRef.hide).toHaveBeenCalled();
   });
 
   it('should close modal on cancel', () => {
+    fixture.detectChanges();
     spyOn(component.bsModalRef, 'hide');
     component.onCancel();
     expect(component.bsModalRef.hide).toHaveBeenCalled();
   });
+
+  it('should unsubscribe subscription when destroyed', () => {
+    fixture.detectChanges();
+    spyOn(component.subscription, 'unsubscribe');
+    component.ngOnDestroy();
+    expect(component.subscription.unsubscribe).toHaveBeenCalled();
+  });
+
 });

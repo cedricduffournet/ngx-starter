@@ -2,21 +2,23 @@
 
 exports[`CivilityListViewComponent should be created 1`] = `
 <app-civility-list-view
-  authorization$={[Function Store]}
+  authFacade={[Function AuthFacade]}
+  canCreate$={[Function Store]}
+  canDelete$={[Function Store]}
+  canUpdate$={[Function Store]}
   civilities$={[Function Store]}
-  loggedUser$={[Function Store]}
-  store={[Function MockStore]}
+  facade={[Function CivilityFacade]}
 >
   <app-page-inner>
     <div
       class="px-3 py-3 "
     >
+      
       <div
         class="page-section"
       >
         <app-civility-items
           ng-reflect-authorization="[object Object]"
-          ng-reflect-civilities=""
         >
           <section
             class="bg-white border-left border-right border-bottom rounded"
@@ -57,21 +59,6 @@ exports[`CivilityListViewComponent should be created 1`] = `
             </div>
           </section>
           
-          <app-button-circle-right
-            label="+"
-            ng-reflect-label="+"
-          >
-            <div>
-              <button
-                class="btn-circle btn-xl btn btn-absolute-corner-right btn-success"
-                ng-reflect-klass="btn-circle btn-xl btn btn-abso"
-                ng-reflect-ng-class="btn-success"
-                type="button"
-              >
-                 + 
-              </button>
-            </div>
-          </app-button-circle-right>
         </app-civility-items>
       </div>
     </div>
