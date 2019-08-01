@@ -63,24 +63,24 @@ describe('AuthReducer ', () => {
     describe('getAuthorized', () => {
       it('should return true because user has ROLE', () => {
         expect(
-          fromAuth
-            .getAuthorized(['TEST_ROLE'])
-            .projector(initialState.userConnected.user)
+          fromAuth.getAuthorized.projector(initialState.userConnected.user, {
+            roles: ['TEST_ROLE']
+          })
         ).toBe(true);
       });
 
       it('should return false because user has not ROLE', () => {
         expect(
-          fromAuth
-            .getAuthorized(['TEST_ROLE_UNKNOWN'])
-            .projector(initialState.userConnected.user)
+          fromAuth.getAuthorized.projector(initialState.userConnected.user, {
+            roles: ['TEST_ROLE_UNKNOWN']
+          })
         ).toBe(false);
       });
 
       it('should return false because user is not logged', () => {
-        expect(fromAuth.getAuthorized(['TEST_ROLE']).projector(null)).toBe(
-          false
-        );
+        expect(
+          fromAuth.getAuthorized.projector(null, { roles: ['TEST_ROLE'] })
+        ).toBe(false);
       });
     });
 

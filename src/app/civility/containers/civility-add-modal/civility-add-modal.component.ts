@@ -1,13 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { Store, select } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-import * as fromCivilities from '@app/civility/state/reducers';
-import { CivilityAddModalActions } from '@app/civility/state/actions';
 import { Civility } from '@app/civility/models/civility';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
 
 @Component({
   selector: 'app-civility-add-modal',
@@ -17,20 +15,12 @@ export class CivilityAddModalComponent implements OnInit, OnDestroy {
   added$: Observable<boolean>;
   adding$: Observable<boolean>;
   subscription: Subscription;
-  selectedCivility$: Observable<Civility>;
 
-  constructor(
-    public bsModalRef: BsModalRef,
-    private store: Store<fromCivilities.State>
-  ) {}
+  constructor(public bsModalRef: BsModalRef, private facade: CivilityFacade) {}
 
   ngOnInit() {
-    this.added$ = this.store.pipe(
-      select(fromCivilities.getCivilityCollectionAdded)
-    );
-    this.adding$ = this.store.pipe(
-      select(fromCivilities.getCivilityCollectionAdding)
-    );
+    this.added$ = this.facade.added$;
+    this.adding$ = this.facade.adding$;
 
     this.subscription = this.added$
       .pipe(filter(added => added))
@@ -46,6 +36,6 @@ export class CivilityAddModalComponent implements OnInit, OnDestroy {
   }
 
   onAdd(civility: Civility) {
-    this.store.dispatch(CivilityAddModalActions.addCivility({ civility }));
+    this.facade.addCivility(civility);
   }
 }

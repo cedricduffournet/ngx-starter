@@ -3,11 +3,11 @@
 exports[`UpdateCivilityModalComponent should be created 1`] = `
 <app-civility-update-modal
   bsModalRef={[Function BsModalRef]}
-  selectedCivility$={[Function Store]}
-  store={[Function MockStore]}
+  facade={[Function Object]}
+  selectedCivility$={[Function Observable]}
   subscription={[Function Subscriber]}
-  updated$={[Function Store]}
-  updating$={[Function Store]}
+  updated$={[Function Observable]}
+  updating$="undefined"
 >
   <app-modal-wrapper
     ng-reflect-title="EDIT_CIVILITY_TITLE"

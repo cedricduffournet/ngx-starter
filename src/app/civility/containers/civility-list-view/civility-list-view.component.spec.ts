@@ -1,7 +1,6 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 
-import { Store } from '@ngrx/store';
-import { MockStore, provideMockStore } from '@ngrx/store/testing';
+import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
 import {
@@ -9,14 +8,14 @@ import {
   CivilityItemsComponent
 } from '@app/civility/components';
 import { CivilityListViewComponent } from '@app/civility/containers';
-import * as fromCivilities from '@app/civility/state/reducers';
-import { CivilityListViewActions } from '@app/civility/state/actions';
 import { SharedModule } from '@app/shared/shared.module';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
+import { AuthFacade } from '@app/authentication/state/auth.facade';
 
 describe('CivilityListViewComponent', () => {
   let fixture: ComponentFixture<CivilityListViewComponent>;
   let component: CivilityListViewComponent;
-  let store: MockStore<fromCivilities.State>;
+  let facade: CivilityFacade;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -27,29 +26,15 @@ describe('CivilityListViewComponent', () => {
       ],
       imports: [SharedModule, TranslateModule.forRoot()],
       providers: [
-        provideMockStore({
-          selectors: [
-            {
-              selector: fromCivilities.getCivilities,
-              value: []
-            },
-            {
-              selector: fromCivilities.getCivilityAuthorization,
-              value: {
-                create: true,
-                delete: true,
-                update: true
-              }
-            }
-          ]
-        })
+        provideMockStore(),
+        CivilityFacade,
+        AuthFacade
       ]
     });
 
     fixture = TestBed.createComponent(CivilityListViewComponent);
     component = fixture.componentInstance;
-    store = TestBed.get(Store);
-    spyOn(store, 'dispatch');
+    facade = TestBed.get(CivilityFacade);
   });
 
   it('should be created', () => {
@@ -58,39 +43,40 @@ describe('CivilityListViewComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should dispatch loadCivilities on init', () => {
-    const action = CivilityListViewActions.loadCivilities();
+  it('should loadCivility on init', () => {
+    spyOn(facade, 'loadCivilities');
     fixture.detectChanges();
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.loadCivilities).toHaveBeenCalledWith();
   });
 
-  it('should dispatch showAddCivilityModal on add event', () => {
-    const action = CivilityListViewActions.showAddCivilityModal();
+  it('should call showAddCivilityModal on add event', () => {
+    spyOn(facade, 'showAddCivilityModal');
     component.onAdd();
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.showAddCivilityModal).toHaveBeenCalledWith();
   });
 
-  it('should dispatch showUpdateCivilityModal on update event', () => {
-    const action = CivilityListViewActions.showUpdateCivilityModal();
+  it('should call showUpdateCivilityModal on update event', () => {
+    spyOn(facade, 'showUpdateCivilityModal');
     component.onUpdate(1);
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.showUpdateCivilityModal).toHaveBeenCalledWith();
   });
 
-  it('should dispatch selectCivility on update event', () => {
-    const action = CivilityListViewActions.selectCivility({ id: 1 });
+  it('should call selectCivility on update event', () => {
+    spyOn(facade, 'selectCivility');
     component.onUpdate(1);
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.selectCivility).toHaveBeenCalledWith(1);
   });
 
-  it('should dispatch showDeleteCivilityModal on update event', () => {
-    const action = CivilityListViewActions.showDeleteCivilityModal();
+  it('should call showDeleteCivilityModal on update event', () => {
+    spyOn(facade, 'showDeleteCivilityModal');
     component.onDelete(1);
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.showDeleteCivilityModal).toHaveBeenCalledWith();
+
   });
 
-  it('should dispatch selectCivility on deletee event', () => {
-    const action = CivilityListViewActions.selectCivility({ id: 1 });
+  it('should call selectCivility on delete event', () => {
+    spyOn(facade, 'selectCivility');
     component.onDelete(1);
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(facade.selectCivility).toHaveBeenCalledWith(1);
   });
 });

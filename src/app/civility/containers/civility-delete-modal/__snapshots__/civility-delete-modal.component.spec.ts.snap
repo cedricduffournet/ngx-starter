@@ -3,10 +3,10 @@
 exports[`DeleteCivilityModalComponent should be created 1`] = `
 <app-civility-delete-modal
   bsModalRef={[Function BsModalRef]}
-  deleted$={[Function Store]}
-  deleting$={[Function Store]}
-  selectedCivility$={[Function Store]}
-  store={[Function MockStore]}
+  deleted$={[Function Observable]}
+  deleting$="undefined"
+  facade={[Function Object]}
+  selectedCivility$="undefined"
   subscription={[Function Subscriber]}
 >
   <app-modal-wrapper

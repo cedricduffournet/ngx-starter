@@ -1,13 +1,9 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { Civility } from '@app/civility/models/civility';
-import { User } from '@app/user/models/User';
-import { Authorization } from '@app/core/models/authorization.model';
-import { CivilityListViewActions } from '@app/civility/state/actions';
-import * as fromAuth from '@app/authentication/state/reducers';
-import * as fromCivilities from '@app/civility/state/reducers';
+import { CivilityFacade } from '@app/civility/state/civility.facade';
+import { AuthFacade } from '@app/authentication/state/auth.facade';
 
 @Component({
   selector: 'app-civility-list-view',
@@ -16,33 +12,34 @@ import * as fromCivilities from '@app/civility/state/reducers';
 })
 export class CivilityListViewComponent implements OnInit {
   civilities$: Observable<Civility[]>;
-  loggedUser$: Observable<User | null>;
-  authorization$: Observable<Authorization>;
+  canUpdate$: Observable<boolean>;
+  canDelete$: Observable<boolean>;
+  canCreate$: Observable<boolean>;
 
   public constructor(
-    private store: Store<fromCivilities.State & fromAuth.State>
+    private facade: CivilityFacade,
+    private authFacade: AuthFacade
   ) {}
 
   public ngOnInit() {
-    this.civilities$ = this.store.pipe(select(fromCivilities.getCivilities));
-    this.loggedUser$ = this.store.pipe(select(fromAuth.getLoggedUser));
-    this.authorization$ = this.store.pipe(
-      select(fromCivilities.getCivilityAuthorization)
-    );
-    this.store.dispatch(CivilityListViewActions.loadCivilities());
+    this.civilities$ = this.facade.civilities$;
+    this.canCreate$ = this.authFacade.isAuthorized(['ROLE_CIVILITY_CREATE']);
+    this.canDelete$ = this.authFacade.isAuthorized(['ROLE_CIVILITY_DELETE']);
+    this.canUpdate$ = this.authFacade.isAuthorized(['ROLE_CIVILITY_EDIT']);
+    this.facade.loadCivilities();
   }
 
   onAdd() {
-    this.store.dispatch(CivilityListViewActions.showAddCivilityModal());
+    this.facade.showAddCivilityModal();
   }
 
   onUpdate(id: number) {
-    this.store.dispatch(CivilityListViewActions.selectCivility({ id }));
-    this.store.dispatch(CivilityListViewActions.showUpdateCivilityModal());
+    this.facade.selectCivility(id);
+    this.facade.showUpdateCivilityModal();
   }
 
   onDelete(id: number): void {
-    this.store.dispatch(CivilityListViewActions.selectCivility({ id }));
-    this.store.dispatch(CivilityListViewActions.showDeleteCivilityModal());
+    this.facade.selectCivility(id);
+    this.facade.showDeleteCivilityModal();
   }
 }

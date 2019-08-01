@@ -2,10 +2,10 @@
 
 exports[`CivilityAddModalComponent should be created 1`] = `
 <app-civility-add-modal
-  added$={[Function Store]}
-  adding$={[Function Store]}
+  added$={[Function Observable]}
+  adding$="undefined"
   bsModalRef={[Function BsModalRef]}
-  store={[Function MockStore]}
+  facade={[Function Object]}
   subscription={[Function Subscriber]}
 >
   <app-modal-wrapper

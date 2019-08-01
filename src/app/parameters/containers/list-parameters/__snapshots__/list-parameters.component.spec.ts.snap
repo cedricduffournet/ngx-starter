@@ -3,7 +3,7 @@
 exports[`ParameterCivilityComponent should be created 1`] = `
 <app-list-parameters
   canViewCivility$={[Function Store]}
-  store={[Function MockStore]}
+  facade={[Function AuthFacade]}
 >
   <app-page-inner>
     <div
